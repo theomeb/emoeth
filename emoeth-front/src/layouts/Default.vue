@@ -4,12 +4,20 @@
       <strong>
         <g-link to="/">{{ $static.metadata.siteName }}</g-link>
       </strong>
-      <nav class="nav">
+      <nav class="nav" style="display: flex">
+        <vs-button :active="!active" @click="active = false">
+          Home
+        </vs-button>
+        <vs-button :active="active" @click="active = true" danger>
+          About
+        </vs-button>
         <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
+        <g-link class="nav__link" to="/about/"><vs-button :active="active" @click="active = true" danger>
+          About
+        </vs-button></g-link>
       </nav>
     </header>
-    <slot/>
+    <slot /> <!-- the content -->
   </div>
 </template>
 
@@ -20,6 +28,14 @@ query {
   }
 }
 </static-query>
+
+<script>
+  export default {
+    data:() => ({
+      active: false
+    })
+  }
+</script>
 
 <style>
 body {
