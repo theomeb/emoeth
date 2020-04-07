@@ -21,7 +21,7 @@
 npm install --global @gridsome/cli
 
 # cd into the project directory
-cd emoeth/emoeth-front
+cd emoeth/emoeth-gridsome
 
 # install dependencies
 npm install

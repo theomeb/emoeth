@@ -12,7 +12,7 @@
 </p>
 
 ## Two starters
-- One with Gridsome: `emoeth-front` ([details why I do not use this one](./emoeth-front/README.md))
+- One with Gridsome: `emoeth-gridsome` ([details why I do not use this one](./emoeth-gridsome/README.md))
 - The real one: `emoeth-vue-frontend`
 
 
