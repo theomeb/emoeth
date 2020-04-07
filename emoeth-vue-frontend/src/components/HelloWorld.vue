@@ -10,10 +10,27 @@
         />
       </v-col>
 
-      <v-col class="mb-4">
+      <v-col class="mb-2">
+        <transition name="menu-popover">
+          <vs-button v-if="testActive" danger class="MenuPopover">Test</vs-button>
+
+        </transition>
+        <v-slide-y-transition
+        >
+          <div v-show="testActive">
+            <vs-button danger >Test3</vs-button>
+          <vs-button danger>Test4</vs-button>
+          </div>
+
+        </v-slide-y-transition>
+
+          <vs-button danger @click="testActive = !testActive">Testtest</vs-button>
+
+
         <h1 class="display-2 font-weight-thin mb-3">
           Welcome to Emoeth
         </h1>
+
 
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
@@ -94,8 +111,8 @@
 <script>
   export default {
     name: 'HelloWorld',
-
     data: () => ({
+      testActive: false,
       ecosystem: [
         {
           text: 'vuetify-loader',
@@ -147,5 +164,28 @@
         },
       ],
     }),
+    mounted() {
+      this.testActive = true;
+    }
   }
 </script>
+
+<style scoped>
+  .menu-popover-enter,
+  .menu-popover-leave-to {
+    opacity: 0;
+    transform: rotateX(50deg) rotateY(50deg);
+  }
+
+  .menu-popover-enter-to,
+  .menu-popover-leave {
+    opacity: 1;
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  .menu-popover-enter-active,
+  .menu-popover-leave-active {
+    transition: opacity, transform 800ms ease-out;
+  }
+
+</style>

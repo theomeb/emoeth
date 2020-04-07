@@ -1,11 +1,13 @@
 import Vue from 'vue';
-import vuesax from './plugins/vuesax'; //used!
-import 'material-icons/iconfont/material-icons.css';
+import Vuesax from 'vuesax';
+import vuesaxOptions from './plugins/vuesax';
 import vuetify from './plugins/vuetify';
 import App from './App.vue';
 import router from './modules/router';
 
 Vue.config.productionTip = false;
+
+Vue.use(Vuesax, vuesaxOptions);
 
 new Vue({
   router,
