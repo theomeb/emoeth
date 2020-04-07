@@ -1,4 +1,4 @@
-#A first attempt to use Gridsome as a framework
+# A first attempt to use Gridsome as a framework
 **Conclusion:** too painful with low benefits for what I wanna do, compared to a simple Vue/Vuetify(+Vuesax) application
  
 # The idea
