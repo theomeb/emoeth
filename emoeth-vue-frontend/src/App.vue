@@ -1,27 +1,24 @@
 <template>
-  <div id="app">
-    <Header></Header>
-    <router-view/>
-  </div>
+  <v-app :dark="false">
+    <emoeth-header></emoeth-header>
+    <v-content>
+      <router-view :key="$route.fullPath"></router-view>
+    </v-content>
+  </v-app>
 </template>
 
-<style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-  }
-</style>
-
 <script>
-  import Header from './components/Header';
+  import EmoethHeader from './components/Header';
 
   export default {
     name: 'App',
+
     components: {
-      Header,
+      EmoethHeader,
     },
+
+    data: () => ({
+      //
+    }),
   };
 </script>
