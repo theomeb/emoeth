@@ -11,6 +11,8 @@
       </v-col>
 
       <v-col class="mb-2">
+        <vs-button danger @click="testActive = !testActive">Check</vs-button>
+
         <transition name="menu-popover">
           <vs-button v-if="testActive" danger class="MenuPopover">Test</vs-button>
 
@@ -18,13 +20,11 @@
         <v-slide-y-transition
         >
           <div v-show="testActive">
-            <vs-button danger >Test3</vs-button>
-          <vs-button danger>Test4</vs-button>
+            <vs-button danger>Test3</vs-button>
+            <vs-button danger>Test4</vs-button>
           </div>
 
         </v-slide-y-transition>
-
-          <vs-button danger @click="testActive = !testActive">Testtest</vs-button>
 
 
         <h1 class="display-2 font-weight-thin mb-3">
