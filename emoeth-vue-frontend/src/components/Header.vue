@@ -44,32 +44,41 @@
               <i class='fas fa-user-circle'></i>
             </template>
           </vs-button>
-          <vs-button to="/" color="dark" transparent animation-type="vertical">
+          <vs-button to="/projects" color="dark" transparent animation-type="vertical" disabled>
+            Projects
+            <template #animate>
+              <i class='fas fa-user-circle'></i>
+            </template>
+          </vs-button>
+          <vs-button to="/blog" color="dark" transparent animation-type="vertical">
             Blog
             <template #animate>
               <i class='fas fa-newspaper'></i>
             </template>
           </vs-button>
-          <vs-button to="/" color="danger" transparent animation-type="vertical" style="margin-right: 14px">
+          <vs-button
+            href="mailto:theomeb@gmail.com" color="danger" transparent
+            animation-type="vertical" style="margin-right: 14px"
+          >
             Contact
             <template #animate>
               <i class="fas fa-envelope"></i>
             </template>
           </vs-button>
 
-          <vs-button icon color="facebook">
-            <i class='fab fa-facebook'></i>
-          </vs-button>
-          <vs-button icon color="linkedin">
+          <vs-button icon color="linkedin" href="https://www.linkedin.com/in/theomeborck/" blank>
             <i class='fab fa-linkedin'></i>
           </vs-button>
-          <vs-button icon color="dark">
+          <vs-button icon color="dark" href="https://github.com/theomeb" blank>
             <i class='fab fa-github'></i>
           </vs-button>
-          <vs-button icon color="medium">
+          <vs-button icon color="medium" href="https://medium.com/@theomeb" blank>
             <i class='fab fa-medium'></i>
           </vs-button>
-          <vs-button icon color="spotify">
+          <vs-button icon color="facebook" href="https://www.facebook.com/theomeb" blank>
+            <i class='fab fa-facebook'></i>
+          </vs-button>
+          <vs-button icon color="spotify" disabled>
             <i class='fab fa-spotify'></i>
           </vs-button>
         </div>

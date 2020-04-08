@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-row class="text-center">
-      <v-col cols="12" class="d-flex justify-center">
-        <h1 class="display-2 font-weight-light mb-3">
-          CV page
+      <v-col cols="12">
+         <h1 class="display-2 font-weight-light mb-3">
+          Blog page
         </h1>
 
       </v-col>
