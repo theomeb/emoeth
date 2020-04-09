@@ -31,7 +31,7 @@
 
       <v-slide-x-transition
       >
-        <div v-show="showButtons" class="buttons">
+        <div v-show="showButtons" class="buttons hidden-xs-only d-sm-flex">
           <vs-button to="/" color="dark" transparent animation-type="vertical">
             Home
             <template #animate>
@@ -58,7 +58,7 @@
           </vs-button>
           <vs-button
             href="mailto:theomeb@gmail.com" color="danger" transparent
-            animation-type="vertical" style="margin-right: 14px"
+            animation-type="vertical"
           >
             Contact
             <template #animate>
@@ -104,6 +104,5 @@
 
   .buttons {
     transition-duration: 1s;
-    display: flex;
   }
 </style>

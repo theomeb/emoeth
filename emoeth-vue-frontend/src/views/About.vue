@@ -1,8 +1,8 @@
 <template>
-  <v-container>
-    <v-row class="text-center">
+  <v-container fluid>
+    <v-row class="elevation-2 justify-space-between">
       <v-col cols="12" class="d-flex justify-center">
-        <h1 class="display-2 font-weight-light mb-3">
+        <h1 class="display-2 font-weight-light mb-3 pa-4">
           CV page
         </h1>
 
