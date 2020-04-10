@@ -101,7 +101,7 @@
       right
       width="110"
     >
-      <v-list-item class="pr-2">
+      <v-list-item class="pr-2 elevation-3" style="height: 56px;">
 
         <v-spacer></v-spacer>
 
@@ -119,50 +119,53 @@
 
       <v-slide-x-reverse-transition>
 
-      <v-container v-if="mobileDrawer" fluid class="transitions pa-0">
-        <v-row>
-          <v-col cols="12" class="pb-0">
-            <vs-button to="/" shadow>
-              <i class='fas fa-home pr-2'></i> Home
-            </vs-button>
-            <vs-button to="/about" shadow>
-              <i class='fas fa-user-circle pr-2'></i> About
-            </vs-button>
-            <vs-button to="/projects" shadow disabled>
-              <i class='fas fa-tasks pr-2'></i> Projetcs
-            </vs-button>
-            <vs-button to="/blog" shadow>
-              <i class='fas fa-newspaper pr-2'></i> Blog
-            </vs-button>
-            <vs-button href="mailto:theomeb@gmail.com" color="danger" shadow>
-              <i class='fas fa-envelope pr-2'></i> Contact
-            </vs-button>
-          </v-col>
-        </v-row>
+        <v-container v-if="mobileDrawer" fluid class="transitions pa-0">
+          <v-row>
+            <v-col cols="12" class="pb-0">
+              <vs-button to="/" shadow :active="active === 0" @click="active=0">
+                <i class='fas fa-home pr-2'></i> Home
+              </vs-button>
+              <vs-button to="/about" shadow :active="active === 1" @click="active=1">
+                <i class='fas fa-user-circle pr-2'></i> About
+              </vs-button>
+              <vs-button to="/projects" shadow disabled :active="active === 2" @click="active=2">
+                <i class='fas fa-tasks pr-2'></i> Projects
+              </vs-button>
+              <vs-button to="/blog" shadow :active="active === 3" @click="active=3">
+                <i class='fas fa-newspaper pr-2'></i> Blog
+              </vs-button>
+              <vs-button
+                href="mailto:theomeb@gmail.com" color="danger" shadow :active="active === 4"
+                @click="active=4"
+              >
+                <i class='fas fa-envelope pr-2'></i> Contact
+              </vs-button>
+            </v-col>
+          </v-row>
 
-        <v-divider class="mx-4 mb-2"></v-divider>
+          <v-divider class="mx-4 mb-2"></v-divider>
 
-        <v-row justify="center">
-          <div cols="12" class="d-flex pb-0">
-            <vs-button icon color="linkedin" href="https://www.linkedin.com/in/theomeborck/" blank>
-              <i class='fab fa-linkedin'></i>
-            </vs-button>
-            <vs-button icon color="dark" href="https://github.com/theomeb" blank>
-              <i class='fab fa-github'></i>
-            </vs-button>
-          </div>
-          <div cols="12" class="d-flex pt-0">
-            <vs-button icon color="medium" href="https://medium.com/@theomeb" blank>
-              <i class='fab fa-medium'></i>
-            </vs-button>
-            <vs-button icon color="facebook" href="https://www.facebook.com/theomeb" blank>
-              <i class='fab fa-facebook'></i>
-            </vs-button>
-          </div>
-        </v-row>
+          <v-row justify="center">
+            <div cols="12" class="d-flex pb-0">
+              <vs-button icon color="linkedin" href="https://www.linkedin.com/in/theomeborck/" blank>
+                <i class='fab fa-linkedin'></i>
+              </vs-button>
+              <vs-button icon color="dark" href="https://github.com/theomeb" blank>
+                <i class='fab fa-github'></i>
+              </vs-button>
+            </div>
+            <div cols="12" class="d-flex pt-0">
+              <vs-button icon color="medium" href="https://medium.com/@theomeb" blank>
+                <i class='fab fa-medium'></i>
+              </vs-button>
+              <vs-button icon color="facebook" href="https://www.facebook.com/theomeb" blank>
+                <i class='fab fa-facebook'></i>
+              </vs-button>
+            </div>
+          </v-row>
 
-      </v-container>
-                </v-slide-x-reverse-transition>
+        </v-container>
+      </v-slide-x-reverse-transition>
 
     </v-navigation-drawer>
   </div>
@@ -174,6 +177,7 @@
     data() {
       return {
         mobileDrawer: false,
+        active: undefined,
         items: [
           {title: 'Home', icon: 'dashboard'},
           {title: 'About', icon: 'question_answer'},
@@ -192,4 +196,28 @@
   .transitions {
     transition-duration: 0.8s;
   }
+
+  /*for mobile buttons*/
+  .vs-button--shadow:active {
+    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
+  }
+
+  .vs-button--active {
+    transform: translateX(8px);
+    -webkit-transform: translateX(8px);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
+  }
+
+  .vs-button--hover {
+    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
+  }
+
+
 </style>
