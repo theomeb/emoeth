@@ -198,13 +198,6 @@
   }
 
   /*for mobile buttons*/
-  .vs-button--shadow:active {
-    transform: translateX(5px);
-    -webkit-transform: translateX(5px);
-    -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
-    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
-  }
-
   .vs-button--active {
     transform: translateX(8px);
     -webkit-transform: translateX(8px);
@@ -212,12 +205,11 @@
     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
   }
 
-  .vs-button--hover {
+  .vs-button--shadow:active, .vs-button--shadow:hover {
     transform: translateX(5px);
     -webkit-transform: translateX(5px);
     -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
   }
-
-
+  
 </style>
