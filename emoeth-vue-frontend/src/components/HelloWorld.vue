@@ -11,6 +11,7 @@
       </v-col>
 
       <v-col class="mb-2">
+        <v-btn rounded outlined color="error" class="test"> Vuetify</v-btn>
         <vs-button danger @click="testActive = !testActive">Check</vs-button>
 
         <transition name="menu-popover">
@@ -186,6 +187,11 @@
   .menu-popover-enter-active,
   .menu-popover-leave-active {
     transition: opacity, transform 800ms ease-out;
+  }
+
+  .test {
+    text-transform: none !important
+  ;
   }
 
 </style>

@@ -211,5 +211,5 @@
     -webkit-box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
     box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, var(--vs-shadow-opacity));
   }
-  
+
 </style>
