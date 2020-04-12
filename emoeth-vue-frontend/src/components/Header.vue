@@ -32,60 +32,43 @@
       <v-slide-x-reverse-transition :appear="true">
         <div class="transitions">
 
-          <vs-button class="hidden-sm-and-up mr-0" size="xl" color="dark" transparent @click="mobileDrawer=true">
+          <vs-button class="hidden-sm-and-up mr-0" size="xl" color="dark" transparent
+                     @click="mobileDrawer=true">
             <i class="fas fa-bars"></i>
           </vs-button>
 
           <div id="desktop-menu" class="hidden-xs-only d-sm-flex">
-            <vs-button to="/" color="dark" transparent animation-type="vertical">
-              Home
-              <template #animate>
-                <i class='fas fa-home'></i>
-              </template>
-            </vs-button>
-            <vs-button to="/about" color="dark" transparent animation-type="vertical">
-              About
-              <template #animate>
-                <i class='fas fa-user-circle'></i>
-              </template>
-            </vs-button>
-            <vs-button to="/projects" color="dark" transparent animation-type="vertical" disabled>
-              Projects
-              <template #animate>
-                <i class='fas fa-tasks'></i>
-              </template>
-            </vs-button>
-            <vs-button to="/blog" color="dark" transparent animation-type="vertical">
-              Blog
-              <template #animate>
-                <i class='fas fa-newspaper'></i>
-              </template>
-            </vs-button>
-            <vs-button
-              href="mailto:theomeb@gmail.com" color="danger" transparent
-              animation-type="vertical"
-            >
-              Contact
-              <template #animate>
-                <i class="fas fa-envelope"></i>
-              </template>
-            </vs-button>
 
-            <vs-button icon color="linkedin" href="https://www.linkedin.com/in/theomeborck/" blank>
-              <i class='fab fa-linkedin'></i>
-            </vs-button>
-            <vs-button icon color="dark" href="https://github.com/theomeb" blank>
-              <i class='fab fa-github'></i>
-            </vs-button>
-            <vs-button icon color="medium" href="https://medium.com/@theomeb" blank>
-              <i class='fab fa-medium'></i>
-            </vs-button>
-            <vs-button icon color="facebook" href="https://www.facebook.com/theomeb" blank>
-              <i class='fab fa-facebook'></i>
-            </vs-button>
-            <vs-button icon color="spotify" disabled>
-              <i class='fab fa-spotify'></i>
-            </vs-button>
+            <div v-for="pageItem in pageItems" :key="pageItem.id">
+              <vs-button
+                v-if="pageItem.external_link" :href="pageItem.link" :disabled="pageItem.disabled"
+                color="dark" transparent animation-type="vertical"
+              >
+                {{pageItem.title}}
+                <template #animate>
+                  <i :class='pageItem.icon'></i>
+                </template>
+              </vs-button>
+              <vs-button
+                v-else :to="pageItem.link" :disabled="pageItem.disabled"
+                color="dark" transparent animation-type="vertical"
+              >
+                {{pageItem.title}}
+                <template #animate>
+                  <i :class='pageItem.icon'></i>
+                </template>
+              </vs-button>
+            </div>
+
+            <div v-for="socialNetworkItem in socialNetworksItems" :key="socialNetworkItem.id">
+              <vs-button
+                icon :color="socialNetworkItem.color" :href="socialNetworkItem.link" blank
+                :disabled="socialNetworkItem.disabled"
+              >
+                <i :class='socialNetworkItem.icon'></i>
+              </vs-button>
+            </div>
+
           </div>
         </div>
       </v-slide-x-reverse-transition>
@@ -122,46 +105,39 @@
         <v-container v-if="mobileDrawer" fluid class="transitions pa-0">
           <v-row>
             <v-col cols="12" class="pb-0">
-              <vs-button to="/" shadow :active="active === 0" @click="active=0">
-                <i class='fas fa-home pr-2'></i> Home
-              </vs-button>
-              <vs-button to="/about" shadow :active="active === 1" @click="active=1">
-                <i class='fas fa-user-circle pr-2'></i> About
-              </vs-button>
-              <vs-button to="/projects" shadow disabled :active="active === 2" @click="active=2">
-                <i class='fas fa-tasks pr-2'></i> Projects
-              </vs-button>
-              <vs-button to="/blog" shadow :active="active === 3" @click="active=3">
-                <i class='fas fa-newspaper pr-2'></i> Blog
-              </vs-button>
-              <vs-button
-                href="mailto:theomeb@gmail.com" color="danger" shadow :active="active === 4"
-                @click="active=4"
-              >
-                <i class='fas fa-envelope pr-2'></i> Contact
-              </vs-button>
+              <div v-for="pageItem in pageItems" :key="pageItem.id">
+                <vs-button
+                  v-if="pageItem.external_link"
+                  :href="pageItem.link" shadow :disabled="pageItem.disabled"
+                  :active="active === pageItem.id" @click="active=pageItem.id"
+                >
+                  <i :class="pageItem.icon + ' pr-2'"></i> {{pageItem.title}}
+                </vs-button>
+                <vs-button
+                  v-else
+                  :to="pageItem.link" shadow :disabled="pageItem.disabled"
+                  :active="active === pageItem.id" @click="active=pageItem.id"
+                >
+                  <i :class="pageItem.icon + ' pr-2'"></i> {{pageItem.title}}
+                </vs-button>
+              </div>
             </v-col>
           </v-row>
 
           <v-divider class="mx-4 mb-2"></v-divider>
 
-          <v-row justify="center">
-            <div cols="12" class="d-flex pb-0">
-              <vs-button icon color="linkedin" href="https://www.linkedin.com/in/theomeborck/" blank>
-                <i class='fab fa-linkedin'></i>
+          <v-row class="ma-3 pa-0" justify="center">
+            <v-col
+              cols="6" class="pa-0"
+              v-for="socialNetworkItem in socialNetworksItems" :key="socialNetworkItem.id"
+            >
+              <vs-button
+                v-if="!socialNetworkItem.disabled"
+                icon :color="socialNetworkItem.color" :href="socialNetworkItem.link" blank>
+                <i :class='socialNetworkItem.icon'></i>
               </vs-button>
-              <vs-button icon color="dark" href="https://github.com/theomeb" blank>
-                <i class='fab fa-github'></i>
-              </vs-button>
-            </div>
-            <div cols="12" class="d-flex pt-0">
-              <vs-button icon color="medium" href="https://medium.com/@theomeb" blank>
-                <i class='fab fa-medium'></i>
-              </vs-button>
-              <vs-button icon color="facebook" href="https://www.facebook.com/theomeb" blank>
-                <i class='fab fa-facebook'></i>
-              </vs-button>
-            </div>
+            </v-col>
+
           </v-row>
 
         </v-container>
@@ -178,10 +154,94 @@
       return {
         mobileDrawer: false,
         active: undefined,
-        items: [
-          {title: 'Home', icon: 'dashboard'},
-          {title: 'About', icon: 'question_answer'},
+        pageItems: [
+          {
+            id: 0,
+            title: 'Home',
+            icon: 'fas fa-home',
+            link: '/',
+            external_link: false,
+            disabled: false
+          },
+          {
+            id: 1,
+            title: 'About',
+            icon: 'fas fa-user-circle',
+            link: '/about',
+            external_link: false,
+            disabled: false
+          },
+          {
+            id: 2,
+            title: 'Projects',
+            icon: 'fas fa-tasks',
+            link: '/projects',
+            external_link: false,
+            disabled: true
+          },
+          {
+            id: 3,
+            title: 'Blog',
+            icon: 'fas fa-newspaper',
+            link: '/blog',
+            external_link: false,
+            disabled: false
+          },
+          {
+            id: 4,
+            title: 'Contact',
+            icon: 'fas fa-envelope',
+            link: 'mailto:theomeb@gmail.com',
+            external_link: true,
+            disabled: false,
+          },
         ],
+        socialNetworksItems: [
+          {
+            id: 0,
+            name: 'LinkedIn',
+            color: 'linkedin',
+            link: 'https://www.linkedin.com/in/theomeborck/',
+            icon: 'fab fa-linkedin',
+            disabled: false,
+          },
+          {
+            id: 1,
+            name: 'Github',
+            color: 'dark',
+            link: 'https://github.com/theomeb',
+            icon: 'fab fa-github',
+            disabled: false,
+
+          },
+          {
+            id: 2,
+            name: 'Medium',
+            color: 'medium',
+            link: 'https://medium.com/@theomeb',
+            icon: 'fab fa-medium',
+            disabled: false,
+
+          },
+          {
+            id: 3,
+            name: 'Facebook',
+            color: 'facebook',
+            link: 'https://www.facebook.com/theomeb',
+            icon: 'fab fa-facebook',
+            disabled: false,
+
+          },
+          {
+            id: 4,
+            name: 'Spotify',
+            color: 'spotify',
+            link: '',
+            icon: 'fab fa-spotify',
+            disabled: true,
+
+          },
+        ]
       };
     },
     mounted() {
