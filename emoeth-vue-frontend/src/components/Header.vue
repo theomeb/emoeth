@@ -14,14 +14,14 @@
           src="../assets/rocket.png"
           transition="scale-transition"
           width="40"
+          title="Icon made by Freepik on Flaticon"
         />
 
         <h1
-          class="shrink mt-1 hidden-sm-only font-weight-thin"
+          class="shrink mt-1 hidden-sm-only font-weight-thin pl-1"
           min-width="100"
           width="100"
           transition="scale-transition"
-          style="padding-left: 4px"
         >
           Emoeth
         </h1>
