@@ -1,6 +1,5 @@
 <template>
   <v-container fluid>
-
     <snackbar :text="'This page is still under construction 😉'"></snackbar>
 
     <experience
@@ -25,7 +24,6 @@
     data: () => {
       return {
         showIllustration: false,
-        temporarySnackbar: true,
         experiences: [
           {
             id: 0,
