@@ -39,7 +39,10 @@
 
           <div id="desktop-menu" class="hidden-xs-only d-sm-flex">
 
-            <div v-for="pageItem in pageItems" :key="pageItem.id">
+            <div
+              v-for="pageItem in pageItems"
+              :key="'desktop-' + pageItem.id" :id="'desktop-' + pageItem.id"
+            >
               <vs-button
                 v-if="pageItem.external_link" :href="pageItem.link" :disabled="pageItem.disabled"
                 color="dark" transparent animation-type="vertical"
@@ -60,7 +63,11 @@
               </vs-button>
             </div>
 
-            <div v-for="socialNetworkItem in socialNetworksItems" :key="socialNetworkItem.id">
+            <div
+              v-for="socialNetworkItem in socialNetworksItems"
+              :key="'desktop-social-' + socialNetworkItem.id"
+              :id="'desktop-social' + socialNetworkItem.id"
+            >
               <vs-button
                 icon :color="socialNetworkItem.color" :href="socialNetworkItem.link" blank
                 :disabled="socialNetworkItem.disabled"
@@ -105,7 +112,10 @@
         <v-container v-if="mobileDrawer" fluid class="transitions pa-0">
           <v-row>
             <v-col cols="12" class="pb-0">
-              <div v-for="pageItem in pageItems" :key="pageItem.id">
+              <div
+                v-for="pageItem in pageItems"
+                :id="'mobile-' + pageItem.id" :key="'mobile-' + pageItem.id"
+              >
                 <vs-button
                   v-if="pageItem.external_link"
                   :href="pageItem.link" shadow :disabled="pageItem.disabled"
@@ -129,7 +139,9 @@
           <v-row class="ma-3 pa-0" justify="center">
             <v-col
               cols="6" class="pa-0"
-              v-for="socialNetworkItem in socialNetworksItems" :key="socialNetworkItem.id"
+              v-for="socialNetworkItem in socialNetworksItems"
+              :id="'mobile-social' + socialNetworkItem.id"
+              :key="'mobile-social' + socialNetworkItem.id"
             >
               <vs-button
                 v-if="!socialNetworkItem.disabled"
