@@ -4,7 +4,7 @@
     <v-slide-x-transition :appear="true">
       <v-snackbar
         v-model="temporarySnackbar" v-if="temporarySnackbar" bottom left color="error"
-        class="custom-transition"
+        class="snackbar-transition"
       >
         <v-icon class="mr-3" color="white" small>fas fa-circle-notch fa-spin</v-icon>
         This page is still under construction 😉
@@ -18,76 +18,23 @@
       </v-snackbar>
     </v-slide-x-transition>
 
-
-    <v-row
-      justify="center" no-gutters v-for="experience in experiences"
+    <experience
+      v-for="experience in experiences" :experience="experience"
+      v-if="showIllustration"
       :key="'experience-' + experience.id" :id="'experience-' + experience.id"
-      class="px-12 py-6"
-    >
+    ></experience>
 
-      <v-col cols="5">
-        <v-slide-x-transition>
-          <v-card
-            class="custom-transition no-border-right"
-            v-if="showIllustration"
-          >
-            <v-img
-              height="280" class=""
-              :src="experience.illustration"
-            ></v-img>
-
-          </v-card>
-        </v-slide-x-transition>
-      </v-col>
-
-      <v-col cols="7" class="justify-center d-flex">
-        <div class="experience-content">
-          <v-slide-x-reverse-transition>
-            <div
-              v-if="showIllustration" :key="'floating-' + experience.id"
-              class="elevation-2 pa-2 white floater custom-transition"
-            >
-              <v-img
-                :src="experience.logo"
-                :alt="experience.alt"
-                width="140px"
-              ></v-img>
-            </div>
-          </v-slide-x-reverse-transition>
-
-          <v-fade-transition>
-            <v-card
-              v-if="showIllustration"
-              transition="fade"
-              class="no-border-left custom-transition"
-              height="280px"
-            >
-              <v-card-title>{{experience.dates}}</v-card-title>
-              <v-card-text>
-                <v-list-item three-line>
-                  <v-list-item-content>
-                    <v-list-item-title>{{experience.title}}</v-list-item-title>
-                    <v-list-item-subtitle v-for="mission in experience.missions"
-                                          :key="'mission-' + mission.id">
-                      {{mission.action}}
-                    </v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-card-text>
-            </v-card>
-          </v-fade-transition>
-        </div>
-      </v-col>
-
-    </v-row>
   </v-container>
 </template>
 
 <script>
+  import Experience from "../components/Experience";
 
   export default {
     name: 'About',
-    components: {},
+    components: {
+      Experience,
+    },
     data: () => {
       return {
         showIllustration: false,
@@ -188,47 +135,8 @@
 </script>
 
 <style scoped>
-  .custom-transition {
+  .snackbar-transition {
     transition-duration: 1s;
-    transition-delay: 0.2s;
-  }
-
-
-  .no-border-right {
-    border-top-right-radius: unset !important;
-    border-bottom-right-radius: unset !important;
-    margin-right: 0;
-  }
-
-  .no-border-left {
-    border-top-left-radius: unset !important;
-    border-bottom-left-radius: unset !important;
-    margin-left: 0;
-  }
-
-
-  .experience-content {
-    position: relative;
-  }
-
-  .floater {
-    position: absolute;
-    z-index: 2;
-    right: 30px;
-    top: 30px;
-    border-radius: 4px !important;
-    transition-duration: 2s;
-  }
-
-
-  /*For transitions*/
-  .slide-x-transition-enter, .slide-x-transition-leave-to {
-    opacity: 0;
-    transform: translateX(-80px);
-  }
-
-  .slide-x-reverse-transition-enter, .slide-x-reverse-transition-leave-to {
-    opacity: 0;
-    transform: translateX(80px);
+    transition-delay: 2s;
   }
 </style>
