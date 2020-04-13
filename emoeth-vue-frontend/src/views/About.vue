@@ -114,11 +114,7 @@
         ]
       }
     },
-    methods: {
-      closeSnackbar: function () {
-        this.temporarySnackbar = false;
-      }
-    },
+    methods: {},
     mounted() {
       this.showIllustration = true;
     }
@@ -126,8 +122,5 @@
 </script>
 
 <style scoped>
-  .snackbar-transition {
-    transition-duration: 1s;
-    transition-delay: 2s;
-  }
+
 </style>
