@@ -1,22 +1,7 @@
 <template>
   <v-container fluid>
 
-    <v-slide-x-transition :appear="true">
-      <v-snackbar
-        v-model="temporarySnackbar" v-if="temporarySnackbar" bottom left color="error"
-        class="snackbar-transition"
-      >
-        <v-icon class="mr-3" color="white" small>fas fa-circle-notch fa-spin</v-icon>
-        This page is still under construction 😉
-        <v-btn
-          color="error" class="mr-2"
-          fab x-small outlined
-          @click="temporarySnackbar = false"
-        >
-          <v-icon color="white">fas fa-times</v-icon>
-        </v-btn>
-      </v-snackbar>
-    </v-slide-x-transition>
+    <snackbar :text="'This page is still under construction 😉'"></snackbar>
 
     <experience
       v-for="experience in experiences" :experience="experience"
@@ -29,11 +14,13 @@
 
 <script>
   import Experience from "../components/Experience";
+  import Snackbar from "../components/Snackbar";
 
   export default {
     name: 'About',
     components: {
       Experience,
+      Snackbar,
     },
     data: () => {
       return {
@@ -127,7 +114,11 @@
         ]
       }
     },
-    methods: {},
+    methods: {
+      closeSnackbar: function () {
+        this.temporarySnackbar = false;
+      }
+    },
     mounted() {
       this.showIllustration = true;
     }
