@@ -27,8 +27,6 @@
       return {}
     },
     methods: {},
-    mounted() {
-    }
   };
 </script>
 

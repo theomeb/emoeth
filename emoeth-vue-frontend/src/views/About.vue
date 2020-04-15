@@ -1,6 +1,6 @@
 <template>
   <v-container fluid min-width="1000px">
-    <snackbar :text="'This page is still under construction 😉'"></snackbar>
+    <snackbar :text="'This page is still under construction! 😉'"></snackbar>
 
     <v-responsive>
       <experience
@@ -26,7 +26,6 @@
     },
     data: () => {
       return {
-        showIllustration: false,
         experiences: [
           {
             id: 0,
@@ -135,9 +134,6 @@
           }
         }
       }
-    },
-    mounted() {
-      this.showIllustration = true;
     }
   };
 </script>

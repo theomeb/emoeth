@@ -1,15 +1,16 @@
 <template>
-  <v-slide-x-transition :appear="true">
+
+  <v-slide-x-transition>
     <v-snackbar
-      v-model="showSnackbar" v-show="showSnackbar" bottom left color="error"
-      class="snackbar-transition"
+      v-model="showSnackbar" bottom left color="error"
+      class="snackbar-transition" :key="snackbarKey" :timeout="0"
     >
       <v-icon class="mr-3" color="white" small>fas fa-circle-notch fa-spin</v-icon>
       {{ text }}
       <v-btn
         color="error" class="mr-2"
         fab x-small outlined
-        @click="showSnackbar = false"
+        @click="closeSnackbar()"
       >
         <v-icon color="white">fas fa-times</v-icon>
       </v-btn>
@@ -22,13 +23,30 @@
     name: "Snackbar",
     data() {
       return {
-        showSnackbar: true
+        showSnackbar: false,
+        snackbarKey: 0, //to re-render component
       }
     },
     props: {
       text: String,
     },
-    methods: {}
+    methods: {
+      openSnackbar() {
+        this.showSnackbar = true;
+      },
+      closeSnackbar() {
+        this.showSnackbar = false;
+        this.snackbarKey = 1;
+      },
+    },
+    mounted() {
+      setTimeout(() => {
+        this.openSnackbar()
+      }, 2000);
+      setTimeout(() => {
+        this.closeSnackbar()
+      }, 7000)
+    }
   }
 </script>
 
@@ -36,7 +54,6 @@
 
   .snackbar-transition {
     transition-duration: 1s;
-    transition-delay: 2s;
   }
 
 </style>
