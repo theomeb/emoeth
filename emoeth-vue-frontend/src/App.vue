@@ -2,7 +2,9 @@
   <v-app :dark="false">
     <emoeth-header></emoeth-header>
     <v-content>
-      <router-view :key="$route.fullPath"></router-view>
+      <v-scroll-y-transition mode="out-in">
+        <router-view :key="$route.fullPath" class="router-transition"></router-view>
+      </v-scroll-y-transition>
     </v-content>
     <emoeth-footer></emoeth-footer>
   </v-app>
@@ -25,3 +27,10 @@
     }),
   };
 </script>
+
+<style scoped>
+
+  .router-transition {
+    transition-duration: 0.4s;
+  }
+</style>
