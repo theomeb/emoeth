@@ -8,7 +8,9 @@
         >
           <v-img
             height="280" class=""
+            :lazy-src="experience.illustration"
             :src="experience.illustration"
+
           ></v-img>
 
         </v-card>
@@ -62,7 +64,8 @@
     props: {
       experience: Object,
       showIllustration: Boolean,
-    }
+    },
+    methods: {}
   }
 </script>
 
