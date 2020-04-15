@@ -1,16 +1,26 @@
 <template>
-  <v-row justify="center" no-gutters class="px-12 py-6">
+  <v-row
+    justify="center" no-gutters class="px-12 py-6"
+    style="min-height: 340px; position:relative;"
+  >
+
+    <v-scale-transition :appear="true">
+      <vs-button
+        v-if="!displayExperience"
+        class="scroll-btn" size="small" upload flat icon color="dark"
+      >
+        <i class="fas fa-arrow-down"></i>
+      </vs-button>
+    </v-scale-transition>
 
     <v-col cols="5">
       <v-slide-x-transition :appear="true">
         <v-card
+          v-if="displayExperience"
           class="custom-transition no-border-right"
         >
           <v-img
-            height="280" class=""
-            :lazy-src="experience.illustration"
-            :src="experience.illustration"
-
+            height="280" :lazy-src="experience.illustration" :src="experience.illustration"
           ></v-img>
 
         </v-card>
@@ -21,6 +31,7 @@
       <div class="experience-content">
         <v-slide-x-reverse-transition :appear="true">
           <div
+            v-if="displayExperience"
             :key="'floating-' + experience.id"
             class="elevation-2 pa-2 white floater custom-transition"
           >
@@ -34,6 +45,7 @@
 
         <v-fade-transition :appear="true">
           <v-card
+            v-if="displayExperience"
             transition="fade"
             class="no-border-left custom-transition"
             height="280px"
@@ -63,13 +75,19 @@
     name: "Experience",
     props: {
       experience: Object,
-      showIllustration: Boolean,
+      displayExperience: Boolean,
     },
     methods: {}
   }
 </script>
 
 <style scoped>
+
+  .scroll-btn {
+    transition-duration: 0.8s;
+    position: absolute;
+    top: -20px;
+  }
 
   .custom-transition {
     transition-duration: 1s;
@@ -99,7 +117,7 @@
     right: -10px;
     top: -15px;
     border-radius: 4px !important;
-    transition-duration: 2s;
+    transition-duration: 1.2s;
   }
 
 

@@ -1,12 +1,15 @@
 <template>
-  <v-container fluid>
+  <v-container fluid min-width="1000px">
     <snackbar :text="'This page is still under construction 😉'"></snackbar>
 
-    <experience
-      v-for="experience in experiences" :experience="experience"
-      v-if="showIllustration"
-      :key="'experience-' + experience.id" :id="'experience-' + experience.id"
-    ></experience>
+    <v-responsive>
+      <experience
+        v-for="experience in experiences" :experience="experience"
+        :display-experience="experience.id < nbExperiencesDisplayed"
+        v-intersect="{handler: onIntersect,options: {threshold: [intersectionThreshold]}}"
+        :key="'experience-' + experience.id" :id="experience.id"
+      ></experience>
+    </v-responsive>
 
   </v-container>
 </template>
@@ -27,6 +30,7 @@
         experiences: [
           {
             id: 0,
+            display: false,
             slug: 'hellofresh_internship',
             title: 'OpsTech Developer',
             dates: 'January - July 2019',
@@ -55,6 +59,7 @@
           },
           {
             id: 1,
+            display: true,
             slug: 'hellofresh_internship',
             title: 'OpsTech Developer',
             dates: 'January - July 2019',
@@ -83,6 +88,7 @@
           },
           {
             id: 2,
+            display: true,
             slug: 'hellofresh_internship',
             title: 'OpsTech Developer',
             dates: 'January - July 2019',
@@ -109,10 +115,27 @@
               }
             ]
           }
-        ]
+        ],
+        nbExperiencesDisplayed: 1,
+        intersectionThreshold: 0.4,
       }
     },
-    methods: {},
+    methods: {
+      onIntersect(entries, observer) {
+        let intersection = entries[0].intersectionRatio;
+        let id = parseInt(entries[0].target.id);
+
+        if ((id + 1) > this.nbExperiencesDisplayed && intersection >= this.intersectionThreshold) {
+          if (intersection >= this.intersectionThreshold) {
+            this.nbExperiencesDisplayed += 1;
+          }
+        } else if ((id + 1) === this.nbExperiencesDisplayed && intersection < this.intersectionThreshold) {
+          if (intersection < this.intersectionThreshold) {
+            this.nbExperiencesDisplayed -= 1;
+          }
+        }
+      }
+    },
     mounted() {
       this.showIllustration = true;
     }
