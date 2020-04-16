@@ -171,7 +171,7 @@
             id: 0,
             title: 'Home',
             icon: 'fas fa-home',
-            link: '/',
+            link: '/home',
             external_link: false,
             disabled: false
           },
