@@ -20,7 +20,7 @@
           class="custom-transition no-border-right"
         >
           <v-img
-            height="280" :lazy-src="experience.illustration" :src="experience.illustration"
+            height="280" :lazy-src="experience.illustration" :src="experience.illustration" alt=""
           ></v-img>
 
         </v-card>
@@ -37,8 +37,10 @@
           >
             <v-img
               :src="experience.logo"
-              :alt="experience.alt"
-              width="140px"
+              :alt="experience.logo_alt"
+              max-height="30px"
+              contain
+              :width="experience.logo_width"
             ></v-img>
           </div>
         </v-slide-x-reverse-transition>
@@ -55,9 +57,11 @@
               <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title>{{experience.title}}</v-list-item-title>
-                  <v-list-item-subtitle v-for="mission in experience.missions"
-                                        :key="'mission-' + mission.id">
-                    {{mission.action}}
+                  <v-list-item-subtitle
+                    v-for="mission in experience.missions"
+                    :key="'mission-' + mission.id" v-html="mission.action"
+                  >
+
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
