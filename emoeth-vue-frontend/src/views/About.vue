@@ -229,7 +229,7 @@
           }
         ],
         nbExperiencesDisplayed: 1,
-        intersectionThreshold: 0.4,
+        intersectionThreshold: 0.3,
       }
     },
     methods: {
