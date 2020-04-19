@@ -39,7 +39,7 @@
             left_position: true,
             logo: require('../assets/logos/tum.png'),
             logo_alt: 'TUM Logo',
-            logo_width: "60px",
+            logo_width: "80px",
             missions: [
               {
                 id: 0,
@@ -62,7 +62,7 @@
             left_position: true,
             logo: require('../assets/logos/hellofresh.svg'),
             logo_alt: 'HelloFresh Logo',
-            logo_width: "140px",
+            logo_width: "150px",
             missions: [
               {
                 id: 0,
@@ -93,7 +93,7 @@
             left_position: true,
             logo: require('../assets/logos/centralesupelec.png'),
             logo_alt: 'CentraleSupélec Logo',
-            logo_width: "80px",
+            logo_width: "100px",
             missions: [
               {
                 id: 0,

@@ -20,7 +20,8 @@
           class="custom-transition no-border-right"
         >
           <v-img
-            height="280" :lazy-src="experience.illustration" :src="experience.illustration" alt=""
+            height="280" :lazy-src="experience.illustration" :src="experience.illustration"
+            :alt="experience.alt"
           ></v-img>
 
         </v-card>
@@ -33,26 +34,34 @@
           <div
             v-if="displayExperience"
             :key="'floating-' + experience.id"
-            class="elevation-2 pa-2 white floater custom-transition"
+            class="elevation-2 pa-2 white floater"
           >
             <v-img
               :src="experience.logo"
               :alt="experience.logo_alt"
-              max-height="30px"
               contain
               :width="experience.logo_width"
+              style="max-height: 50px;"
             ></v-img>
           </div>
         </v-slide-x-reverse-transition>
 
+
+<!--        <v-scale-transition :appear="true" class="custom-transition">-->
+<!--          <v-img-->
+<!--            v-if="displayExperience" class="experience-icon" contain-->
+<!--            :src="require('../assets/mortarboard.svg')"-->
+<!--          ></v-img>-->
+<!--        </v-scale-transition>-->
+
         <v-fade-transition :appear="true">
           <v-card
             v-if="displayExperience"
-            transition="fade"
             class="no-border-left custom-transition"
             height="280px"
           >
-            <v-card-title>{{experience.dates}}</v-card-title>
+            <v-card-title class="font-weight-light">{{experience.dates}}</v-card-title>
+            <v-card-subtitle>Test</v-card-subtitle>
             <v-card-text>
               <v-list-item three-line>
                 <v-list-item-content>
@@ -61,7 +70,6 @@
                     v-for="mission in experience.missions"
                     :key="'mission-' + mission.id" v-html="mission.action"
                   >
-
                   </v-list-item-subtitle>
                 </v-list-item-content>
               </v-list-item>
@@ -95,7 +103,6 @@
 
   .custom-transition {
     transition-duration: 1s;
-    transition-delay: 0s;
   }
 
   .no-border-right {
@@ -110,7 +117,6 @@
     margin-left: 0;
   }
 
-
   .experience-content {
     position: relative;
   }
@@ -124,6 +130,15 @@
     transition-duration: 1.2s;
   }
 
+  .experience-icon {
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    bottom: 20px;
+    height: 40px;
+    width: 40px;
+    transition-duration: 1.2s;
+  }
 
   /*For transitions*/
   .slide-x-transition-enter, .slide-x-transition-leave-to {
