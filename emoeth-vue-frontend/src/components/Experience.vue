@@ -13,7 +13,7 @@
       </vs-button>
     </v-scale-transition>
 
-    <v-col cols="5">
+    <v-col cols="5" v-if="!imageRightAligned">
       <v-slide-x-transition :appear="true">
         <v-card
           v-if="displayExperience"
@@ -30,11 +30,28 @@
 
     <v-col cols="7" class="justify-center d-flex">
       <div class="experience-content">
-        <v-slide-x-reverse-transition :appear="true">
+
+        <v-slide-x-transition :appear="true" v-if="imageRightAligned">
           <div
             v-if="displayExperience"
             :key="'floating-' + experience.id"
-            class="elevation-2 pa-2 white floater"
+            class="elevation-2 pa-2 white floater floater_left"
+          >
+            <v-img
+              :src="experience.logo"
+              :alt="experience.logo_alt"
+              contain
+              :width="experience.logo_width"
+              style="max-height: 50px;"
+            ></v-img>
+          </div>
+        </v-slide-x-transition>
+
+        <v-slide-x-reverse-transition :appear="true" v-else>
+          <div
+            v-if="displayExperience"
+            :key="'floating-' + experience.id"
+            class="elevation-2 pa-2 white floater floater_right"
           >
             <v-img
               :src="experience.logo"
@@ -60,8 +77,11 @@
             class="no-border-left custom-transition"
             height="280px"
           >
-            <v-card-title class="font-weight-medium">{{experience.title}}</v-card-title>
-            <v-card-subtitle>{{experience.dates}}</v-card-subtitle>
+            <div :align="imageRightAligned ? 'right' : ''">
+              <v-card-title class="font-weight-medium" style="display: block">{{experience.title}}</v-card-title>
+              <v-card-subtitle>{{experience.dates}}</v-card-subtitle>
+            </div>
+
             <v-card-text>
               <v-list-item three-line>
                 <v-list-item-content>
@@ -85,6 +105,21 @@
       </div>
     </v-col>
 
+    <v-col cols="5" v-if="imageRightAligned">
+      <v-slide-x-reverse-transition :appear="true">
+        <v-card
+          v-if="displayExperience"
+          class="custom-transition no-border-right"
+        >
+          <v-img
+            height="280" :lazy-src="experience.illustration" :src="experience.illustration"
+            :alt="experience.alt"
+          ></v-img>
+
+        </v-card>
+      </v-slide-x-reverse-transition>
+    </v-col>
+
   </v-row>
 </template>
 
@@ -94,6 +129,7 @@
     props: {
       experience: Object,
       displayExperience: Boolean,
+      imageRightAligned: Boolean,
     },
     methods: {}
   }
@@ -129,11 +165,18 @@
 
   .floater {
     position: absolute;
-    z-index: 2;
-    right: -10px;
-    top: -15px;
     border-radius: 4px !important;
     transition-duration: 1.2s;
+    z-index: 2;
+    top: -15px;
+  }
+
+  .floater_left {
+    left: -10px;
+  }
+
+  .floater_right {
+    right: -10px;
   }
 
   .experience-icon {

@@ -8,6 +8,7 @@
         :display-experience="experience.id < nbExperiencesDisplayed"
         v-intersect="{handler: onIntersect,options: {threshold: [intersectionThreshold]}}"
         :key="'experience-' + experience.id" :id="experience.id"
+        :image-right-aligned="experience.id % 2 === 1"
       ></experience>
     </v-responsive>
 
@@ -37,7 +38,6 @@
             dates: 'September 2019 - now',
             illustration: require('../assets/illustrations/munich.jpg'),
             alt: 'Munich picture',
-            left_position: true,
             logo: require('../assets/logos/tum.png'),
             logo_alt: 'TUM Logo',
             logo_width: "80px",
@@ -69,7 +69,6 @@
             dates: 'January - July 2019',
             illustration: require('../assets/illustrations/sydney.jpg'),
             alt: 'Sydney picture',
-            left_position: true,
             logo: require('../assets/logos/hellofresh.svg'),
             logo_alt: 'HelloFresh Logo',
             logo_width: "150px",
@@ -101,7 +100,6 @@
             dates: 'September 2016 - now',
             illustration: require('../assets/illustrations/centralesupelec.jpg'),
             alt: 'CentraleSupélec picture',
-            left_position: true,
             logo: require('../assets/logos/centralesupelec.png'),
             logo_alt: 'CentraleSupélec Logo',
             logo_width: "100px",
@@ -141,7 +139,6 @@
             dates: 'January - July 2019',
             illustration: require('../assets/illustrations/munich.jpg'),
             alt: 'Sydney picture',
-            left_position: true,
             logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
             logo_alt: 'HelloFresh Logo',
             logo_width: "160px",
@@ -172,7 +169,6 @@
             dates: 'January - July 2019',
             illustration: require('../assets/illustrations/munich.jpg'),
             alt: 'Sydney picture',
-            left_position: true,
             logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
             logo_alt: 'HelloFresh Logo',
             logo_width: "160px",
@@ -202,7 +198,6 @@
             title: 'OpsTech Developer',
             dates: 'January - July 2019',
             illustration: require('../assets/illustrations/munich.jpg'),
-            left_position: true,
             logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
             alt: 'Sydney picture',
             logo_alt: 'HelloFresh Logo',
@@ -233,7 +228,6 @@
             dates: 'January - July 2019',
             illustration: require('../assets/illustrations/munich.jpg'),
             alt: 'Sydney picture',
-            left_position: true,
             logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
             logo_logo_alt: 'HelloFresh Logo',
             logo_width: "160px",
