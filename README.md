@@ -32,10 +32,8 @@ npm run serve
 
 ## Deploy on Github pages
 
-1. Go on root repository folder
-`cd emoeth/emoeth-vue-front-end`
-2. Simply launch the make command with the appopriate version tag
-`make deploy_vue_front version=0.13`
+1. Go on root repository folder: `cd emoeth/emoeth-vue-front-end`
+2. Simply launch the make command with the appopriate version tag: `make deploy_vue_front version=0.13`
 3. *Deploy logs are saved in [deploy_logs.txt](./deploy_logs.txt)*
 
 That's it, now the site gets deployed automatically.
