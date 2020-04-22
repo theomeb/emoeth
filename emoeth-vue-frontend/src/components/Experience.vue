@@ -35,14 +35,14 @@
           <div
             v-if="displayExperience"
             :key="'floating-' + experience.id"
-            class="elevation-2 pa-2 white floater floater_left"
+            class="elevation-2 pa-1 white floater floater_left"
           >
             <v-img
               :src="experience.logo"
               :alt="experience.logo_alt"
               contain
               :width="experience.logo_width"
-              style="max-height: 50px;"
+              style="max-height: 80px;"
             ></v-img>
           </div>
         </v-slide-x-transition>
@@ -51,14 +51,14 @@
           <div
             v-if="displayExperience"
             :key="'floating-' + experience.id"
-            class="elevation-2 pa-2 white floater floater_right"
+            class="elevation-2 pa-1 white floater floater_right"
           >
             <v-img
               :src="experience.logo"
               :alt="experience.logo_alt"
               contain
               :width="experience.logo_width"
-              style="max-height: 50px;"
+              style="max-height: 80px;"
             ></v-img>
           </div>
         </v-slide-x-reverse-transition>
@@ -79,7 +79,7 @@
           >
             <div :align="imageRightAligned ? 'right' : ''">
               <v-card-title class="font-weight-medium" style="display: block">{{experience.title}}</v-card-title>
-              <v-card-subtitle>{{experience.dates}}</v-card-subtitle>
+              <v-card-subtitle class="pb-0">{{experience.dates}}</v-card-subtitle>
             </div>
 
             <v-card-text>

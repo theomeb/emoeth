@@ -134,120 +134,109 @@
           {
             id: 3,
             display: true,
-            slug: 'hellofresh_internship',
-            title: 'OpsTech Developer',
-            dates: 'January - July 2019',
-            illustration: require('../assets/illustrations/munich.jpg'),
-            alt: 'Sydney picture',
-            logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
-            logo_alt: 'HelloFresh Logo',
-            logo_width: "160px",
+            slug: 'theodo_internship',
+            title: 'Full-stack Web Developer @ Theodo',
+            subtitle: 'Part of a web-development consulting company',
+            dates: 'July 2018 - January 2019',
+            illustration: require('../assets/illustrations/paris.jpg'),
+            alt: 'Paris picture',
+            logo: require('../assets/logos/theodo.png'),
+            logo_alt: 'Theodo Logo',
+            logo_width: "80px",
             missions: [
               {
                 id: 0,
-                action: '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes'
+                action: '• Counseled numerous clients to help them build software solving their business problems'
               },
               {
                 id: 1,
-                action: ' • Gathered customer data to support Customer Care and Finance teams with a dedicated interface'
+                action: ' • Improved in a scrum-organized environment the website of <b>Tarkett</b>, a top multinational specialized in flooring (€2,836 billion revenue)'
               },
               {
                 id: 2,
-                action: '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company'
+                action: '• Applied Agile & Lean methods to make continuous improvement'
               },
-              {
-                id: 3,
-                action: '• Mined historical data to improve user experience and support Quality team'
-              }
             ]
           },
           {
             id: 4,
             display: true,
-            slug: 'hellofresh_internship',
-            title: 'OpsTech Developer',
-            dates: 'January - July 2019',
-            illustration: require('../assets/illustrations/munich.jpg'),
-            alt: 'Sydney picture',
-            logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
-            logo_alt: 'HelloFresh Logo',
+            slug: 'lumex_tv_internship',
+            title: 'Operator Intern @ Lumex TV',
+            subtitle: 'Lighting and power equipment rental company (TV, Cinema, Advertisement)',
+            dates: 'July 2017',
+            illustration: require('../assets/illustrations/lumex.jpg'),
+            alt: 'Blue collar picture',
+            logo: require('../assets/logos/lumex.png'),
+            logo_alt: 'Lumex Logo',
             logo_width: "160px",
             missions: [
               {
                 id: 0,
-                action: '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes'
+                action: '• Worked 4 weeks as a blue-collar worker in a team of 10 operators'
               },
               {
                 id: 1,
-                action: ' • Gathered customer data to support Customer Care and Finance teams with a dedicated interface'
+                action: ' • Carried out repairs on mechanical and electric material, picking/packing orders'
               },
-              {
-                id: 2,
-                action: '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company'
-              },
-              {
-                id: 3,
-                action: '• Mined historical data to improve user experience and support Quality team'
-              }
             ]
           },
           {
             id: 5,
             display: true,
-            slug: 'hellofresh_internship',
-            title: 'OpsTech Developer',
-            dates: 'January - July 2019',
-            illustration: require('../assets/illustrations/munich.jpg'),
-            logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
-            alt: 'Sydney picture',
-            logo_alt: 'HelloFresh Logo',
+            slug: 'prepa_academic',
+            title: 'MPSI/MP* @ Lycée Corneille, Normandie',
+            subtitle: '2 years of preparation',
+            dates: 'September 2014 - July 2016',
+            illustration: require('../assets/illustrations/prepa.jpg'),
+            alt: 'Prepa picture',
+            logo: require('../assets/logos/pierre_corneille.png'),
+            logo_alt: 'Lycee Pierre Corneille Logo',
+            logo_width: "60px",
             missions: [
               {
                 id: 0,
-                action: '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes'
+                action: 'for the highly competitive entrance exams to the French Grandes Écoles'
               },
               {
                 id: 1,
-                action: ' • Gathered customer data to support Customer Care and Finance teams with a dedicated interface'
+                action: '• Mathematics'
               },
               {
                 id: 2,
-                action: '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company'
+                action: '• Physics'
               },
               {
                 id: 3,
-                action: '• Mined historical data to improve user experience and support Quality team'
+                action: '• Computer Science'
+              },
+              {
+                id: 4,
+                action: '• Philosophy and General Culture'
               }
             ]
           },
           {
             id: 6,
             display: true,
-            slug: 'hellofresh_internship',
-            title: 'OpsTech Developer',
-            dates: 'January - July 2019',
-            illustration: require('../assets/illustrations/munich.jpg'),
-            alt: 'Sydney picture',
-            logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
-            logo_logo_alt: 'HelloFresh Logo',
-            logo_width: "160px",
+            slug: 'baccalaureate_academic',
+            title: 'Scientific High School Diploma',
+            subtitle: 'French Baccalaureate',
+            dates: 'July 2014',
+            illustration: require('../assets/illustrations/normandie.jpg'),
+            alt: 'Normandie picture',
+            logo: require('../assets/logos/education_nationale.png'),
+            logo_alt: 'Education Nationale Logo',
+            logo_width: "60px",
             missions: [
               {
                 id: 0,
-                action: '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes'
+                action: '• <b>European section</b>'
               },
               {
                 id: 1,
-                action: ' • Gathered customer data to support Customer Care and Finance teams with a dedicated interface'
+                action: ' • Graduated with highest honors – <b>19,47/20</b>'
               },
-              {
-                id: 2,
-                action: '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company'
-              },
-              {
-                id: 3,
-                action: '• Mined historical data to improve user experience and support Quality team'
-              }
             ]
           }
         ],
