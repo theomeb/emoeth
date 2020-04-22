@@ -32,7 +32,8 @@
             id: 0,
             display: false,
             slug: 'tum_academic',
-            title: 'Technische Universität München – Faculty of Mathematics',
+            title: 'MSc Mathematics in Data Science @ TUM',
+            subtitle: 'One of the best European Data Science program',
             dates: 'September 2019 - now',
             illustration: require('../assets/illustrations/munich.jpg'),
             alt: 'Munich picture',
@@ -43,11 +44,19 @@
             missions: [
               {
                 id: 0,
-                action: 'Master of Science – Mathematics in Data Science'
+                action: '<b>Data Engineering</b>: Foundations in Data Engineering, Databases and CPU architectures',
               },
               {
                 id: 1,
-                action: '<i>Lectures</i>: Machine Learning, Deep Learning, Data Engineering, Applied Regression, Data Mining'
+                action: '<b>Data analysis</b>: Foundations in Data Analysis, Applied Regression '
+              },
+              {
+                id: 2,
+                action: '<b>Data analytics</b>: Machine Learning, ML for Graphs and Sequential Data, Deep Learning, Computer Vision (Detection, Segmentation and Tracking)'
+              },
+              {
+                id: 3,
+                action: '<b>TUM Data Innovation Lab</b>: Deep Learning for Genetic Risk Prediction'
               }
             ]
           },
@@ -55,7 +64,8 @@
             id: 1,
             display: true,
             slug: 'hellofresh_internship',
-            title: 'OpsTech Developer',
+            title: 'OpsTech Developer @ HelloFresh',
+            subtitle: 'Part of a small tech team helping a food-delivery company',
             dates: 'January - July 2019',
             illustration: require('../assets/illustrations/sydney.jpg'),
             alt: 'Sydney picture',
@@ -85,8 +95,9 @@
           {
             id: 2,
             display: true,
-            slug: 'theodo_internship',
-            title: 'CentraleSupélec – former École Centrale Paris',
+            slug: 'cs_academic',
+            title: 'Master of Engineering @ École Centrale Paris',
+            subtitle: 'One of France’s top-3 engineering schools',
             dates: 'September 2016 - now',
             illustration: require('../assets/illustrations/centralesupelec.jpg'),
             alt: 'CentraleSupélec picture',
@@ -97,14 +108,29 @@
             missions: [
               {
                 id: 0,
-                action: '<b>One of France’s top-3 engineering schools</b>'
+                action: '<b>Maths</b>: Analysis, Probability, Statistics, Partial Differential Equations',
               },
               {
                 id: 1,
-                action: '<i>Lectures:</i> Analysis, Probability, Statistics, Machine Learning, Software Development, Economy,\n' +
-                  'Corporate Finance, Entrepreneurship, Physics, Physical statistics applied to economy, Life Science, Heat\n' +
-                  'Transfer, Thermodynamics, Mechanics'
-              }
+                action: '<b>Computer Science</b>: Machine Learning, Software Development, Algorithms and Programming'
+              },
+              {
+                id: 2,
+                action: '<b>Business</b>: Economy, Advanced, Corporate Finance, Entrepreneurship, Applications of statistical physics to socio-economical complex\n' +
+                  'systems'
+              },
+              {
+                id: 3,
+                action: '<b>Physics</b>: Heat Transfer, Thermodynamics, Quantum and Statistical Physics, Life Science'
+              },
+              {
+                id: 4,
+                action: '<b>Engineering</b>: Embedded Control Systems, Sustainable Development, Design of Mechanical Structures Laboratory, Civil Engineering'
+              },
+              {
+                id: 5,
+                action: '<b>Innovation project</b>: Mobile application implementation for campus community'
+              },
             ]
           },
           {
@@ -118,6 +144,7 @@
             left_position: true,
             logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
             logo_alt: 'HelloFresh Logo',
+            logo_width: "160px",
             missions: [
               {
                 id: 0,
@@ -148,6 +175,7 @@
             left_position: true,
             logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
             logo_alt: 'HelloFresh Logo',
+            logo_width: "160px",
             missions: [
               {
                 id: 0,
@@ -208,6 +236,7 @@
             left_position: true,
             logo: 'https://cdn.hellofresh.com/logo/HelloFresh_Logo_Horizontal_V2.svg',
             logo_logo_alt: 'HelloFresh Logo',
+            logo_width: "160px",
             missions: [
               {
                 id: 0,

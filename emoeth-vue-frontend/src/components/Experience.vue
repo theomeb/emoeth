@@ -1,6 +1,6 @@
 <template>
   <v-row
-    justify="center" no-gutters class="px-12 py-6"
+    justify="center" no-gutters class="px-12 mx-12 py-6"
     style="min-height: 340px; position:relative;"
   >
 
@@ -47,12 +47,12 @@
         </v-slide-x-reverse-transition>
 
 
-<!--        <v-scale-transition :appear="true" class="custom-transition">-->
-<!--          <v-img-->
-<!--            v-if="displayExperience" class="experience-icon" contain-->
-<!--            :src="require('../assets/mortarboard.svg')"-->
-<!--          ></v-img>-->
-<!--        </v-scale-transition>-->
+        <!--        <v-scale-transition :appear="true" class="custom-transition">-->
+        <!--          <v-img-->
+        <!--            v-if="displayExperience" class="experience-icon" contain-->
+        <!--            :src="require('../assets/mortarboard.svg')"-->
+        <!--          ></v-img>-->
+        <!--        </v-scale-transition>-->
 
         <v-fade-transition :appear="true">
           <v-card
@@ -60,15 +60,21 @@
             class="no-border-left custom-transition"
             height="280px"
           >
-            <v-card-title class="font-weight-light">{{experience.dates}}</v-card-title>
-            <v-card-subtitle>Test</v-card-subtitle>
+            <v-card-title class="font-weight-medium">{{experience.title}}</v-card-title>
+            <v-card-subtitle>{{experience.dates}}</v-card-subtitle>
             <v-card-text>
               <v-list-item three-line>
                 <v-list-item-content>
-                  <v-list-item-title>{{experience.title}}</v-list-item-title>
+                  <v-list-item-title
+                    class="font-weight-regular text-uppercase subtitle-1"
+                    style="white-space: normal; line-height: 1"
+                  >
+                    {{experience.subtitle}}
+                  </v-list-item-title>
                   <v-list-item-subtitle
                     v-for="mission in experience.missions"
                     :key="'mission-' + mission.id" v-html="mission.action"
+                    class="font-weight-light"
                   >
                   </v-list-item-subtitle>
                 </v-list-item-content>
