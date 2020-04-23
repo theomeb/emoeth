@@ -1,6 +1,5 @@
 <template>
   <v-container fluid min-width="1000px">
-    <snackbar :text="'This page is still under construction! 😉'"></snackbar>
 
     <v-responsive>
       <experience
@@ -34,7 +33,7 @@
             display: false,
             slug: 'tum_academic',
             title: 'MSc Mathematics in Data Science @ TUM',
-            subtitle: 'One of the best European Data Science program',
+            subtitle: 'One of the best European Data Science programs',
             dates: 'September 2019 - now',
             illustration: require('../assets/illustrations/munich.jpg'),
             lazy_illustration: require('../assets/illustrations/low_quality/munich.jpg'),
