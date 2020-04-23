@@ -67,7 +67,7 @@
         <v-fade-transition :appear="true">
           <v-card
             v-if="displayExperience"
-            class="no-border-left custom-transition"
+            v-bind:class="[imageRightAligned ? 'no-border-right' : 'no-border-left' , 'custom-transition']"
             height="300px"
           >
             <div :align="imageRightAligned ? 'right' : ''">
