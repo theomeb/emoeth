@@ -5,7 +5,10 @@
       <experience
         v-for="experience in experiences" :experience="experience"
         :display-experience="experience.id < nbExperiencesDisplayed"
-        v-intersect="{handler: onIntersect,options: {threshold: [intersectionThreshold]}}"
+        v-intersect="{
+          handler: onIntersect,
+          options: {threshold: [intersectionThreshold-0.1, intersectionThreshold+0.1]
+          }}"
         :key="'experience-' + experience.id" :id="experience.id"
         :image-right-aligned="experience.id % 2 === 1"
       ></experience>
@@ -247,7 +250,7 @@
           }
         ],
         nbExperiencesDisplayed: 1,
-        intersectionThreshold: 0.3,
+        intersectionThreshold: 0.8,
       }
     },
     methods: {

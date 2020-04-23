@@ -134,7 +134,8 @@
   .scroll-btn {
     transition-duration: 0.8s;
     position: absolute;
-    top: -20px;
+    top: -5px;
+    width: 80px;
   }
 
   .custom-transition {
