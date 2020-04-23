@@ -37,10 +37,11 @@
             subtitle: 'One of the best European Data Science program',
             dates: 'September 2019 - now',
             illustration: require('../assets/illustrations/munich.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/munich.jpg'),
             alt: 'Munich picture',
             logo: require('../assets/logos/tum.png'),
             logo_alt: 'TUM Logo',
-            logo_width: "80px",
+            logo_width: "70px",
             missions: [
               {
                 id: 0,
@@ -68,10 +69,11 @@
             subtitle: 'Part of a small tech team helping a food-delivery company',
             dates: 'January - July 2019',
             illustration: require('../assets/illustrations/sydney.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/sydney.jpg'),
             alt: 'Sydney picture',
             logo: require('../assets/logos/hellofresh.svg'),
             logo_alt: 'HelloFresh Logo',
-            logo_width: "150px",
+            logo_width: "160px",
             missions: [
               {
                 id: 0,
@@ -99,6 +101,7 @@
             subtitle: 'One of France’s top-3 engineering schools',
             dates: 'September 2016 - now',
             illustration: require('../assets/illustrations/centralesupelec.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/centralesupelec.jpg'),
             alt: 'CentraleSupélec picture',
             logo: require('../assets/logos/centralesupelec.png'),
             logo_alt: 'CentraleSupélec Logo',
@@ -139,6 +142,7 @@
             subtitle: 'Part of a web-development consulting company',
             dates: 'July 2018 - January 2019',
             illustration: require('../assets/illustrations/paris.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/paris.jpg'),
             alt: 'Paris picture',
             logo: require('../assets/logos/theodo.png'),
             logo_alt: 'Theodo Logo',
@@ -166,10 +170,11 @@
             subtitle: 'Lighting and power equipment rental company (TV, Cinema, Advertisement)',
             dates: 'July 2017',
             illustration: require('../assets/illustrations/lumex.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/lumex.jpg'),
             alt: 'Blue collar picture',
             logo: require('../assets/logos/lumex.png'),
             logo_alt: 'Lumex Logo',
-            logo_width: "160px",
+            logo_width: "140px",
             missions: [
               {
                 id: 0,
@@ -189,14 +194,15 @@
             subtitle: '2 years of preparation',
             dates: 'September 2014 - July 2016',
             illustration: require('../assets/illustrations/prepa.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/prepa.jpg'),
             alt: 'Prepa picture',
             logo: require('../assets/logos/pierre_corneille.png'),
             logo_alt: 'Lycee Pierre Corneille Logo',
-            logo_width: "60px",
+            logo_width: "50px",
             missions: [
               {
                 id: 0,
-                action: 'for the highly competitive entrance exams to the French Grandes Écoles'
+                action: '<b>for the highly competitive entrance exams to the French Grandes Écoles</b>'
               },
               {
                 id: 1,
@@ -224,10 +230,11 @@
             subtitle: 'French Baccalaureate',
             dates: 'July 2014',
             illustration: require('../assets/illustrations/normandie.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/normandie.jpg'),
             alt: 'Normandie picture',
             logo: require('../assets/logos/education_nationale.png'),
             logo_alt: 'Education Nationale Logo',
-            logo_width: "60px",
+            logo_width: "70px",
             missions: [
               {
                 id: 0,

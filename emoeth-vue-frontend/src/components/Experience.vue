@@ -13,14 +13,14 @@
       </vs-button>
     </v-scale-transition>
 
-    <v-col cols="5" v-if="!imageRightAligned">
+    <v-col cols="6" v-if="!imageRightAligned">
       <v-slide-x-transition :appear="true">
         <v-card
           v-if="displayExperience"
           class="custom-transition no-border-right"
         >
           <v-img
-            height="280" :lazy-src="experience.illustration" :src="experience.illustration"
+            height="300px" :lazy-src="experience.illustration" :src="experience.illustration"
             :alt="experience.alt"
           ></v-img>
 
@@ -28,43 +28,36 @@
       </v-slide-x-transition>
     </v-col>
 
-    <v-col cols="7" class="justify-center d-flex">
+    <v-col cols="6" class="justify-center d-flex">
       <div class="experience-content">
 
         <v-slide-x-transition :appear="true" v-if="imageRightAligned">
-          <div
+          <v-img
             v-if="displayExperience"
             :key="'floating-' + experience.id"
-            class="elevation-2 pa-1 white floater floater_left"
-          >
-            <v-img
-              :src="experience.logo"
-              :alt="experience.logo_alt"
-              contain
-              :width="experience.logo_width"
-              style="max-height: 80px;"
-            ></v-img>
-          </div>
+            :src="experience.logo"
+            :alt="experience.logo_alt"
+            contain
+            :width="experience.logo_width"
+            class="pa-1 floater floater_left"
+          ></v-img>
         </v-slide-x-transition>
 
         <v-slide-x-reverse-transition :appear="true" v-else>
-          <div
+          <v-img
             v-if="displayExperience"
             :key="'floating-' + experience.id"
-            class="elevation-2 pa-1 white floater floater_right"
-          >
-            <v-img
-              :src="experience.logo"
-              :alt="experience.logo_alt"
-              contain
-              :width="experience.logo_width"
-              style="max-height: 80px;"
-            ></v-img>
-          </div>
+            :src="experience.logo"
+            :alt="experience.logo_alt"
+            contain
+            :width="experience.logo_width"
+            class="pa-1 floater floater_right"
+          ></v-img>
         </v-slide-x-reverse-transition>
 
 
-        <!--        <v-scale-transition :appear="true" class="custom-transition">-->
+        <!--        <v-scale-transition :appear=" true
+            " class="custom-transition">-->
         <!--          <v-img-->
         <!--            v-if="displayExperience" class="experience-icon" contain-->
         <!--            :src="require('../assets/mortarboard.svg')"-->
@@ -75,10 +68,12 @@
           <v-card
             v-if="displayExperience"
             class="no-border-left custom-transition"
-            height="280px"
+            height="300px"
           >
             <div :align="imageRightAligned ? 'right' : ''">
-              <v-card-title class="font-weight-medium" style="display: block">{{experience.title}}</v-card-title>
+              <v-card-title class="font-weight-medium" style="display: block">
+                {{experience.title}}
+              </v-card-title>
               <v-card-subtitle class="pb-0">{{experience.dates}}</v-card-subtitle>
             </div>
 
@@ -105,14 +100,14 @@
       </div>
     </v-col>
 
-    <v-col cols="5" v-if="imageRightAligned">
+    <v-col cols="6" v-if="imageRightAligned">
       <v-slide-x-reverse-transition :appear="true">
         <v-card
           v-if="displayExperience"
-          class="custom-transition no-border-right"
+          class="custom-transition no-border-left"
         >
           <v-img
-            height="280" :lazy-src="experience.illustration" :src="experience.illustration"
+            height="300px" :lazy-src="experience.illustration" :src="experience.illustration"
             :alt="experience.alt"
           ></v-img>
 
@@ -130,8 +125,7 @@
       experience: Object,
       displayExperience: Boolean,
       imageRightAligned: Boolean,
-    },
-    methods: {}
+    }
   }
 </script>
 
@@ -168,15 +162,16 @@
     border-radius: 4px !important;
     transition-duration: 1.2s;
     z-index: 2;
-    top: -15px;
+    top: 10px;
+    filter: drop-shadow(2px 2px 2px darkgrey);
   }
 
   .floater_left {
-    left: -10px;
+    left: 15px;
   }
 
   .floater_right {
-    right: -10px;
+    right: 15px;
   }
 
   .experience-icon {
