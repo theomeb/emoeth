@@ -2,3 +2,7 @@
 [2020-04-15 20:46:20] Build v0.12 deployed.
 [2020-04-18 19:04:10] Build v0.13 deployed.
 [2020-04-22 19:46:44] Build v0.14 deployed.
+[2020-04-23 10:49:27] Build v0.15 deployed.
+[2020-04-23 10:53:04] Build v0.16 deployed.
+[2020-04-23 14:42:46] Build v0.17 deployed.
+

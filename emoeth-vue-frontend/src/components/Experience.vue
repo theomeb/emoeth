@@ -20,7 +20,7 @@
           class="custom-transition no-border-right"
         >
           <v-img
-            height="300px" :lazy-src="experience.illustration" :src="experience.illustration"
+            height="300px" :lazy-src="experience.lazy_illustration" :src="experience.illustration"
             :alt="experience.alt"
           ></v-img>
 
@@ -107,7 +107,7 @@
           class="custom-transition no-border-left"
         >
           <v-img
-            height="300px" :lazy-src="experience.illustration" :src="experience.illustration"
+            height="300px" :lazy-src="experience.lazy_illustration" :src="experience.illustration"
             :alt="experience.alt"
           ></v-img>
 
