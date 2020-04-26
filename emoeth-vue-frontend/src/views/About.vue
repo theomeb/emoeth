@@ -7,7 +7,7 @@
         :display-experience="experience.id < nbExperiencesDisplayed"
         v-intersect="{
           handler: onIntersect,
-          options: {threshold: [intersectionThreshold-0.1, intersectionThreshold+0.1]
+          options: {threshold: [closeIntersectionThreshold,  intersectionThreshold]
           }}"
         :key="'experience-' + experience.id" :id="experience.id"
         :image-right-aligned="experience.id % 2 === 1"
@@ -250,7 +250,8 @@
           }
         ],
         nbExperiencesDisplayed: 1,
-        intersectionThreshold: 0.8,
+        intersectionThreshold: 0.7,
+        closeIntersectionThreshold: 0.5,
       }
     },
     methods: {
@@ -262,7 +263,7 @@
           if (intersection >= this.intersectionThreshold) {
             this.nbExperiencesDisplayed += 1;
           }
-        } else if ((id + 1) === this.nbExperiencesDisplayed && intersection < this.intersectionThreshold) {
+        } else if ((id + 1) === this.nbExperiencesDisplayed && intersection <= this.closeIntersectionThreshold) {
           if (intersection < this.intersectionThreshold) {
             this.nbExperiencesDisplayed -= 1;
           }

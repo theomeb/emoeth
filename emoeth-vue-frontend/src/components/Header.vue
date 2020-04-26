@@ -4,12 +4,12 @@
       app
       color="white"
       elevate-on-scroll
+      class="px-md-12"
     >
       <div class="d-flex align-center">
         <v-img
           alt="Building bee logo"
-          class="shrink mr-2"
-          style="margin-bottom: 8px"
+          class="shrink mr-2 mb-2 ml-md-12"
           contain
           src="../assets/rocket.png"
           transition="scale-transition"
@@ -37,7 +37,7 @@
             <i class="fas fa-bars"></i>
           </vs-button>
 
-          <div id="desktop-menu" class="hidden-xs-only d-sm-flex">
+          <div id="desktop-menu" class="hidden-xs-only d-sm-flex pr-md-12">
 
             <div
               v-for="pageItem in pageItems"
