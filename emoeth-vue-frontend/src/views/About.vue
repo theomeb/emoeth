@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid min-width="1000px">
+  <v-container fluid>
 
     <v-responsive>
       <experience

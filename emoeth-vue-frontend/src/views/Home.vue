@@ -2,20 +2,218 @@
   <div class="home">
     <snackbar :text="'This page is still under construction 😉'"></snackbar>
 
-    <HelloWorld/>
+    <v-row
+      justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12 pt-6 pb-2"
+
+    >
+      <v-col cols="12" align="center">
+        <v-slide-y-transition :appear="true">
+          <div id="title" class="display-1 font-weight-light">
+            {{displayedTitle}}
+            <div class="cursor" v-if="indexTyping < title.length"></div>
+          </div>
+        </v-slide-y-transition>
+        <v-slide-y-transition :appear="true">
+          <div id="subtitle" class="headline font-weight-thin">
+            {{displayedSubTitle}}
+            <div
+              class="cursor"
+              v-if="indexTyping >= title.length && indexTyping < (title.length + subTitle.length)"
+            ></div>
+          </div>
+        </v-slide-y-transition>
+        <v-slide-y-transition :appear="true">
+          <v-divider
+            v-if="showOptions" class="mt-4 mb-6 custom-transition"
+            style="width:500px;"
+          ></v-divider>
+        </v-slide-y-transition>
+      </v-col>
+    </v-row>
+
+    <v-slide-y-transition :appear="true">
+      <v-row v-if="showOptions" class="custom-transition" no-gutters justify="center">
+
+        <v-col cols="2" align="right">
+          <v-hover
+            v-slot:default="{ hover }"
+            open-delay="0"
+            v-if="showOptions"
+          >
+            <v-card
+              :elevation="!hover ? 2 : 10"
+              max-width="230"
+              :color="theme.light.info"
+              to="about"
+            >
+              <v-list-item>
+                <v-list-item-content>
+                  <div class="body-2 font-weight-light text-left white--text">WHO AM I ?</div>
+                </v-list-item-content>
+                <v-list-item-avatar
+                >
+                  <v-img :src="avatarLink"></v-img>
+                </v-list-item-avatar>
+              </v-list-item>
+
+              <v-card-actions>
+                <div class="subtitle-1 font-weight-regular pl-2 white--text">Check out my
+                  experiences
+                </div>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
+        </v-col>
+        <v-col cols="2" align="center" class="mx-4">
+          <v-hover
+            v-slot:default="{ hover }"
+            open-delay="0"
+            v-if="showOptions"
+          >
+            <v-card
+              :elevation="!hover ? 2 : 10"
+              max-width="230"
+              :color="theme.light.warning"
+              to="blog"
+            >
+              <v-list-item>
+                <v-list-item-content>
+                  <div class="body-2 font-weight-light text-left">BLOG</div>
+                </v-list-item-content>
+                <v-list-item-avatar>
+                  <v-icon color="black">fas fa-rss-square</v-icon>
+                </v-list-item-avatar>
+              </v-list-item>
+
+              <v-card-actions>
+                <div class="subtitle-1 font-weight-regular pl-2">Go to my previous posts</div>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
+
+        </v-col>
+        <v-col cols="2" align="left">
+          <v-hover
+            v-slot:default="{ hover }"
+            open-delay="0"
+            v-if="showOptions"
+          >
+            <v-card
+              :elevation="!hover ? 2 : 10"
+              max-width="220"
+              :color="theme.light.error"
+              to="projects"
+              disabled
+            >
+              <v-list-item>
+                <v-list-item-content>
+                  <div class="body-2 font-weight-light text-left">PROJECTS</div>
+                </v-list-item-content>
+                <v-list-item-avatar>
+                  <v-icon color="black">fas fa-project-diagram</v-icon>
+                </v-list-item-avatar>
+              </v-list-item>
+
+              <v-card-actions>
+                <div class="subtitle-1 font-weight-regular pl-2">Click to see my projects</div>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
+        </v-col>
+      </v-row>
+    </v-slide-y-transition>
+
+
   </div>
 </template>
 
 <script>
-  // @ is an alias to /src
-  import HelloWorld from '@/components/HelloWorld.vue';
   import Snackbar from "../components/Snackbar";
+  import theme from "../modules/theme";
 
   export default {
     name: 'home',
     components: {
-      HelloWorld,
-      Snackbar
+      Snackbar,
     },
+    data() {
+      return {
+        avatarLink: require('../assets/pp.jpg'),
+        typeWritingSpeed: 40,
+        indexTyping: 0,
+        displayedTitle: '',
+        title: 'Hey\nthere,',
+        displayedSubTitle: '',
+        subTitle: 'you safely reached out my personal website',
+        showOptions: false,
+        theme: theme
+      }
+    },
+    methods: {
+      typeTitle() {
+        if (this.indexTyping < this.title.length) {
+          this.displayedTitle += this.title.charAt(this.indexTyping);
+          this.indexTyping++;
+          setTimeout(this.typeTitle, this.typeWritingSpeed);
+        } else {
+          this.typeSubtitle();
+        }
+      },
+      typeSubtitle() {
+        if (this.indexTyping < this.subTitle.length + this.title.length) {
+          this.displayedSubTitle += this.subTitle.charAt(this.indexTyping - this.title.length);
+          this.indexTyping++;
+          setTimeout(this.typeTitle, this.typeWritingSpeed);
+        } else {
+          setTimeout(() => {
+            this.showOptions = true;
+          }, 100);
+
+        }
+      }
+    },
+    mounted() {
+      this.typeTitle();
+    }
+
+
   };
 </script>
+
+<style scoped>
+  .custom-transition {
+    transition-duration: 0.8s;
+  }
+
+
+  #title, #subtitle {
+    height: 40px;
+    white-space: nowrap;
+    position: relative;
+    width: min-content;
+  }
+
+  .cursor {
+    border-bottom: solid 3px #FF5252;
+    position: absolute;
+    right: -20px;
+    width: 15px;
+  }
+
+
+  .cursor {
+    animation: animated-cursor 600ms steps(30, end) infinite;
+  }
+
+  /* cursor animations */
+  @keyframes animated-cursor {
+    from {
+      border-bottom-color: #FF5252;
+    }
+    to {
+      border-bottom-color: transparent;
+    }
+
+  }
+
+</style>
