@@ -1,6 +1,6 @@
 <template>
   <v-row
-    justify="center" no-gutters class="px-4 px-xl-12 mx-xl-12 py-6"
+    justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12 py-6"
     style="min-height: 340px; position:relative;"
   >
 
@@ -13,14 +13,14 @@
       </vs-button>
     </v-scale-transition>
 
-    <v-col cols="4" lg="6" v-if="!imageRightAligned">
+    <v-col cols="5" lg="6" v-if="!imageRightAligned">
       <v-slide-x-transition :appear="true">
         <v-card
           v-if="displayExperience"
           class="custom-transition no-border-right"
         >
           <v-img
-            height="340px" :lazy-src="experience.lazy_illustration" :src="experience.illustration"
+            height="320px" :lazy-src="experience.lazy_illustration" :src="experience.illustration"
             :alt="experience.alt"
           ></v-img>
 
@@ -28,7 +28,7 @@
       </v-slide-x-transition>
     </v-col>
 
-    <v-col cols="8" lg="6" class="justify-center d-flex">
+    <v-col cols="7" lg="6" class="justify-center d-flex">
       <div class="experience-content">
 
         <v-slide-x-transition :appear="true" v-if="imageRightAligned">
@@ -55,20 +55,11 @@
           ></v-img>
         </v-slide-x-reverse-transition>
 
-
-        <!--        <v-scale-transition :appear=" true
-            " class="custom-transition">-->
-        <!--          <v-img-->
-        <!--            v-if="displayExperience" class="experience-icon" contain-->
-        <!--            :src="require('../assets/mortarboard.svg')"-->
-        <!--          ></v-img>-->
-        <!--        </v-scale-transition>-->
-
         <v-fade-transition :appear="true">
           <v-card
             v-if="displayExperience"
             v-bind:class="[imageRightAligned ? 'no-border-right' : 'no-border-left' , 'custom-transition']"
-            height="340px"
+            height="320px"
           >
             <div :align="imageRightAligned ? 'right' : ''">
               <v-card-title class="font-weight-medium" style="display: block">
@@ -100,14 +91,14 @@
       </div>
     </v-col>
 
-    <v-col cols="4" lg="6" v-if="imageRightAligned">
+    <v-col cols="5" lg="6" v-if="imageRightAligned">
       <v-slide-x-reverse-transition :appear="true">
         <v-card
           v-if="displayExperience"
           class="custom-transition no-border-left"
         >
           <v-img
-            height="340px" :lazy-src="experience.lazy_illustration" :src="experience.illustration"
+            height="320px" :lazy-src="experience.lazy_illustration" :src="experience.illustration"
             :alt="experience.alt"
           ></v-img>
 

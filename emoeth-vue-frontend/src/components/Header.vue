@@ -4,12 +4,12 @@
       app
       color="white"
       elevate-on-scroll
-      class="px-md-12"
+      class="px-4 px-lg-12"
     >
       <div class="d-flex align-center">
         <v-img
           alt="Building bee logo"
-          class="shrink mr-2 mb-2 ml-md-12"
+          class="shrink mr-2 mb-2 ml-lg-12"
           contain
           src="../assets/rocket.png"
           transition="scale-transition"
@@ -18,7 +18,7 @@
         />
 
         <h1
-          class="shrink mt-1 hidden-sm-only font-weight-thin pl-1"
+          class="shrink mt-1 font-weight-thin pl-1"
           min-width="100"
           width="100"
           transition="scale-transition"
@@ -32,12 +32,12 @@
       <v-slide-x-reverse-transition :appear="true">
         <div class="transitions">
 
-          <vs-button class="hidden-sm-and-up mr-0" size="xl" color="dark" transparent
+          <vs-button class="hidden-md-and-up mr-0" size="xl" color="dark" transparent
                      @click="mobileDrawer=true">
             <i class="fas fa-bars"></i>
           </vs-button>
 
-          <div id="desktop-menu" class="hidden-xs-only d-sm-flex pr-md-12">
+          <div id="desktop-menu" class="hidden-sm-and-down d-md-flex pr-lg-12">
 
             <div
               v-for="pageItem in pageItems"
@@ -242,15 +242,6 @@
             link: 'https://www.facebook.com/theomeb',
             icon: 'fab fa-facebook',
             disabled: false,
-
-          },
-          {
-            id: 4,
-            name: 'Spotify',
-            color: 'spotify',
-            link: '',
-            icon: 'fab fa-spotify',
-            disabled: true,
 
           },
         ]
