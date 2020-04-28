@@ -1,11 +1,6 @@
 <template>
   <div class="home">
-    <snackbar :text="'This page is still under construction 😉'"></snackbar>
-
-    <v-row
-      justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12 pt-6 pb-2"
-
-    >
+    <v-row justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12 pt-6 pb-2">
       <v-col cols="12" align="center">
         <v-slide-y-transition :appear="true">
           <div id="title" class="display-1 font-weight-light">
@@ -33,8 +28,7 @@
 
     <v-slide-y-transition :appear="true">
       <v-row v-if="showOptions" class="custom-transition" no-gutters justify="center">
-
-        <v-col cols="2" align="right">
+        <v-col cols="3" align="right" class="mb-4 hidden-sm-and-down">
           <v-hover
             v-slot:default="{ hover }"
             open-delay="0"
@@ -42,16 +36,15 @@
           >
             <v-card
               :elevation="!hover ? 2 : 10"
-              max-width="230"
+              max-width="250"
               :color="theme.light.info"
               to="about"
             >
               <v-list-item>
                 <v-list-item-content>
-                  <div class="body-2 font-weight-light text-left white--text">WHO AM I ?</div>
+                  <div class="body-2 font-weight-light text-left white--text">THÉOMÉ BORCK</div>
                 </v-list-item-content>
-                <v-list-item-avatar
-                >
+                <v-list-item-avatar>
                   <v-img :src="avatarLink"></v-img>
                 </v-list-item-avatar>
               </v-list-item>
@@ -64,7 +57,7 @@
             </v-card>
           </v-hover>
         </v-col>
-        <v-col cols="2" align="center" class="mx-4">
+        <v-col cols="3" align="center" class="mb-4 hidden-sm-and-down">
           <v-hover
             v-slot:default="{ hover }"
             open-delay="0"
@@ -72,7 +65,7 @@
           >
             <v-card
               :elevation="!hover ? 2 : 10"
-              max-width="230"
+              max-width="250"
               :color="theme.light.warning"
               to="blog"
             >
@@ -92,7 +85,7 @@
           </v-hover>
 
         </v-col>
-        <v-col cols="2" align="left">
+        <v-col cols="3" align="left" class="mb-4 hidden-sm-and-down">
           <v-hover
             v-slot:default="{ hover }"
             open-delay="0"
@@ -100,7 +93,92 @@
           >
             <v-card
               :elevation="!hover ? 2 : 10"
-              max-width="220"
+              max-width="250"
+              :color="theme.light.error"
+              to="projects"
+              disabled
+            >
+              <v-list-item>
+                <v-list-item-content>
+                  <div class="body-2 font-weight-light text-left">PROJECTS</div>
+                </v-list-item-content>
+                <v-list-item-avatar>
+                  <v-icon color="black">fas fa-project-diagram</v-icon>
+                </v-list-item-avatar>
+              </v-list-item>
+
+              <v-card-actions>
+                <div class="subtitle-1 font-weight-regular pl-2">Click to see my projects</div>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
+        </v-col>
+
+        <v-col cols="12" align="center" class="mb-4 hidden-md-and-up">
+          <v-hover
+            v-slot:default="{ hover }"
+            open-delay="0"
+            v-if="showOptions"
+          >
+            <v-card
+              :elevation="!hover ? 2 : 10"
+              max-width="250"
+              :color="theme.light.info"
+              to="about"
+            >
+              <v-list-item>
+                <v-list-item-content>
+                  <div class="body-2 font-weight-light text-left white--text">THÉOMÉ BORCK</div>
+                </v-list-item-content>
+                <v-list-item-avatar>
+                  <v-img :src="avatarLink"></v-img>
+                </v-list-item-avatar>
+              </v-list-item>
+
+              <v-card-actions>
+                <div class="subtitle-1 font-weight-regular pl-2 white--text">Check out my
+                  experiences
+                </div>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
+        </v-col>
+        <v-col cols="12" align="center" class="mb-4 hidden-md-and-up">
+          <v-hover
+            v-slot:default="{ hover }"
+            open-delay="0"
+            v-if="showOptions"
+          >
+            <v-card
+              :elevation="!hover ? 2 : 10"
+              max-width="250"
+              :color="theme.light.warning"
+              to="blog"
+            >
+              <v-list-item>
+                <v-list-item-content>
+                  <div class="body-2 font-weight-light text-left">BLOG</div>
+                </v-list-item-content>
+                <v-list-item-avatar>
+                  <v-icon color="black">fas fa-rss-square</v-icon>
+                </v-list-item-avatar>
+              </v-list-item>
+
+              <v-card-actions>
+                <div class="subtitle-1 font-weight-regular pl-2">Go to my previous posts</div>
+              </v-card-actions>
+            </v-card>
+          </v-hover>
+        </v-col>
+        <v-col cols="12" align="center" class="mb-4 hidden-md-and-up">
+          <v-hover
+            v-slot:default="{ hover }"
+            open-delay="0"
+            v-if="showOptions"
+          >
+            <v-card
+              :elevation="!hover ? 2 : 10"
+              max-width="250"
               :color="theme.light.error"
               to="projects"
               disabled
