@@ -1,7 +1,43 @@
 <template>
   <v-container fluid>
 
-    <v-responsive>
+    <v-row justify="center" no-gutters class="mx-12 px-12">
+      <v-col cols="4" align="left" align-self="center" class="d-flex">
+        <v-avatar size="80">
+          <v-img :src="avatarLink"></v-img>
+        </v-avatar>
+        <div class="display-1 font-weight-light pl-4 align-self-center">
+          Théomé Borck
+        </div>
+
+      </v-col>
+      <v-col cols="8" align="right">
+
+        <div class="title font-weight-medium">
+          Dual degree student
+        </div>
+        <div class="body-1 font-weight-light">
+          Master of Engineering @ École Centrale Paris
+        </div>
+        <div class="body-1 font-weight-light">
+          Master of Science - Mathematics in Data Science @ TUM
+        </div>
+      </v-col>
+    </v-row>
+
+
+    <v-row class="mx-12 px-12">
+      <v-col cols="12" align="center">
+        <v-scale-transition :appear="true">
+          <v-divider
+            v-if="showExperiences" class="mt-4"
+          ></v-divider>
+        </v-scale-transition>
+      </v-col>
+    </v-row>
+
+
+    <v-responsive v-if="showExperiences">
       <experience
         v-for="experience in experiences" :experience="experience"
         :display-experience="experience.id < nbExperiencesDisplayed"
@@ -252,6 +288,8 @@
         nbExperiencesDisplayed: 1,
         intersectionThreshold: 0.7,
         closeIntersectionThreshold: 0.5,
+        showExperiences: false,
+        avatarLink: require('../assets/pp.jpg'),
       }
     },
     methods: {
@@ -269,6 +307,11 @@
           }
         }
       }
+    },
+    mounted() {
+      setTimeout(() => {
+        this.showExperiences = true;
+      }, 500);
     }
   };
 </script>
