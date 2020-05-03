@@ -1,8 +1,8 @@
 <template>
   <v-container fluid>
 
-    <v-row justify="center" no-gutters class="mx-12 px-12">
-      <v-col cols="4" align="left" align-self="center" class="d-flex">
+    <v-row justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12">
+      <v-col cols="5" align="left" align-self="center" class="d-flex">
         <v-avatar size="80">
           <v-img :src="avatarLink"></v-img>
         </v-avatar>
@@ -11,7 +11,7 @@
         </div>
 
       </v-col>
-      <v-col cols="8" align="right">
+      <v-col cols="7" align="right">
 
         <div class="title font-weight-medium">
           Dual degree student
@@ -26,7 +26,7 @@
     </v-row>
 
 
-    <v-row class="mx-12 px-12">
+    <v-row class="px-4 px-lg-12 mx-lg-12">
       <v-col cols="12" align="center">
         <v-scale-transition :appear="true">
           <v-divider
