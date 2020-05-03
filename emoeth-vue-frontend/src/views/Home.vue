@@ -217,7 +217,7 @@
     data() {
       return {
         avatarLink: require('../assets/pp.jpg'),
-        typeWritingSpeed: 40,
+        typeWritingSpeed: 30,
         indexTyping: 0,
         displayedTitle: '',
         title: 'Hey\nthere,',
@@ -245,7 +245,7 @@
         } else {
           setTimeout(() => {
             this.showOptions = true;
-          }, 100);
+          }, this.typeWritingSpeed);
 
         }
       }
