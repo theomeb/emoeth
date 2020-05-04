@@ -9,8 +9,9 @@
           </div>
         </v-slide-y-transition>
         <v-slide-y-transition :appear="true">
-          <div id="subtitle" class="headline font-weight-thin">
-            {{displayedSubTitle}}
+          <div class="headline font-weight-thin d-sm-flex justify-center">
+            <div> {{displayedSubTitle.substring(0,22) + '&nbsp'}}</div>
+            <div> {{displayedSubTitle.substring(23, displayedSubTitle.length)}}</div>
             <div
               class="cursor"
               v-if="indexTyping >= title.length && indexTyping < (title.length + subTitle.length)"
