@@ -229,6 +229,11 @@
     },
     methods: {
       typeTitle() {
+        if (this.$route.name === 'home') {
+          this.displayedTitle = this.title;
+          this.displayedSubTitle = this.subTitle;
+          this.indexTyping = this.subTitle.length + this.title.length;
+        }
         if (this.indexTyping < this.title.length) {
           this.displayedTitle += this.title.charAt(this.indexTyping);
           this.indexTyping++;
