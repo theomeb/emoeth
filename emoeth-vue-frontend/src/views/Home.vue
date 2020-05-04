@@ -10,12 +10,20 @@
         </v-slide-y-transition>
         <v-slide-y-transition :appear="true">
           <div class="headline font-weight-thin d-sm-flex justify-center">
-            <div> {{displayedSubTitle.substring(0,22) + '&nbsp'}}</div>
-            <div> {{displayedSubTitle.substring(23, displayedSubTitle.length)}}</div>
-            <div
-              class="cursor"
-              v-if="indexTyping >= title.length && indexTyping < (title.length + subTitle.length)"
-            ></div>
+            <div class="subtitle">
+              {{displayedSubTitle.substring(0,22) + '&nbsp'}}
+              <div
+                class="cursor"
+                v-if="indexTyping >= title.length && indexTyping < (title.length + 22)"
+              ></div>
+            </div>
+            <div class="subtitle">
+              {{displayedSubTitle.substring(23, displayedSubTitle.length)}}
+              <div
+                class="cursor"
+                v-if="indexTyping >= title.length + 24 && indexTyping < (title.length + subTitle.length)"
+              ></div>
+            </div>
           </div>
         </v-slide-y-transition>
         <v-slide-y-transition :appear="true">
@@ -270,10 +278,16 @@
   }
 
 
-  #title, #subtitle {
+  #title {
     height: 40px;
     white-space: nowrap;
     position: relative;
+    width: min-content;
+  }
+
+  .subtitle {
+    position: relative;
+    white-space: nowrap;
     width: min-content;
   }
 
