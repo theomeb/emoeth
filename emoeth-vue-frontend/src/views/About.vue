@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container fluid class="pa-0">
 
     <v-row justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12">
       <v-col cols="12" md="5" align="left" align-self="center" class="d-flex">
@@ -41,7 +41,7 @@
     </v-row>
 
 
-    <v-row class="px-4 px-lg-12 mx-lg-12">
+    <v-row class="px-4 px-lg-12 mx-lg-12 hidden-sm-and-down">
       <v-col cols="12" align="center">
         <v-scale-transition :appear="true">
           <v-divider

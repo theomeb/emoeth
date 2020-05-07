@@ -1,10 +1,22 @@
 <template>
   <v-row
-    justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12 py-6"
-    style="min-height: 340px; position:relative;"
+    justify="center" no-gutters
   >
-    Test
-
+    <v-col cols="12">
+      <v-parallax
+        :src="experience.illustration"
+      >
+        <v-row
+          align="center"
+          justify="center"
+        >
+          <v-col class="text-center" cols="12">
+            <h1 class="display-1 font-weight-thin">Vuetify.js</h1>
+            <h4 class="subheading">Build your application today!</h4>
+          </v-col>
+        </v-row>
+      </v-parallax>
+    </v-col>
   </v-row>
 </template>
 
