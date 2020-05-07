@@ -166,16 +166,6 @@
     right: 15px;
   }
 
-  .experience-icon {
-    position: absolute;
-    z-index: 2;
-    right: 10px;
-    bottom: 20px;
-    height: 40px;
-    width: 40px;
-    transition-duration: 1.2s;
-  }
-
   /*For transitions*/
   .slide-x-transition-enter, .slide-x-transition-leave-to {
     opacity: 0;
