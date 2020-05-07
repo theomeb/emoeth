@@ -2,27 +2,42 @@
   <v-container fluid>
 
     <v-row justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12">
-      <v-col cols="5" align="left" align-self="center" class="d-flex">
-        <v-avatar size="80">
+      <v-col cols="12" md="5" align="left" align-self="center" class="d-flex">
+        <v-avatar size="80" class="hidden-sm-and-down">
           <v-img :src="avatarLink"></v-img>
         </v-avatar>
-        <div class="display-1 font-weight-light pl-4 align-self-center">
-          Théomé Borck
+        <div class="align-self-center">
+          <div class="display-1 font-weight-light hidden-sm-and-down pl-4">
+            Théomé Borck
+          </div>
+          <div class="display-1 font-weight-light hidden-md-and-up">
+            Théomé Borck
+          </div>
         </div>
+        <v-spacer></v-spacer>
+        <v-avatar size="60" class="hidden-md-and-up">
+          <v-img :src="avatarLink"></v-img>
+        </v-avatar>
 
       </v-col>
-      <v-col cols="7" align="right">
-
+      <v-col cols="12" md="7" class="text-md-right ma-4 ma-md-0">
         <div class="title font-weight-medium">
           Dual degree student
         </div>
-        <div class="body-1 font-weight-light">
+        <div class="body-1 text-md font-weight-light hidden-xs-only">
           Master of Engineering @ École Centrale Paris
         </div>
-        <div class="body-1 font-weight-light">
+        <div class="body-1 font-weight-light hidden-xs-only">
           Master of Science - Mathematics in Data Science @ TUM
         </div>
+        <div class="body-2 font-weight-light hidden-sm-and-up">
+          Master of Engineering @ École Centrale Paris
+        </div>
+        <div class="body-2 font-weight-light hidden-sm-and-up">
+          MSc - Mathematics in Data Science @ TUM
+        </div>
       </v-col>
+
     </v-row>
 
 
