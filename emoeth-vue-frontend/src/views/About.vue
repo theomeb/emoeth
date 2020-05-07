@@ -37,7 +37,7 @@
     </v-row>
 
 
-    <v-responsive v-if="showExperiences">
+    <v-responsive v-if="showExperiences" class="hidden-sm-and-down">
       <experience
         v-for="experience in experiences" :experience="experience"
         :display-experience="experience.id < nbExperiencesDisplayed"
@@ -50,11 +50,26 @@
       ></experience>
     </v-responsive>
 
+
+    <v-responsive class="hidden-md-and-up">
+      <mobile-experience
+        v-for="experience in experiences" :experience="experience"
+        :display-experience="experience.id < nbExperiencesDisplayed"
+        v-intersect="{
+          handler: onIntersect,
+          options: {threshold: [closeIntersectionThreshold,  intersectionThreshold]
+          }}"
+        :key="'mobile-experience-' + experience.id" :id="experience.id"
+        :image-right-aligned="experience.id % 2 === 1"
+      ></mobile-experience>
+    </v-responsive>
+
   </v-container>
 </template>
 
 <script>
   import Experience from "../components/Experience";
+  import MobileExperience from "../components/MobileExperience";
   import Snackbar from "../components/Snackbar";
 
 
@@ -62,6 +77,7 @@
     name: 'About',
     components: {
       Experience,
+      MobileExperience,
       Snackbar,
     },
     data: () => {
