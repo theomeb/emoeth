@@ -28,9 +28,14 @@
   };
 </script>
 
-<style scoped>
+<style>
 
   .router-transition {
     transition-duration: 0.4s;
   }
+
+  body, html {
+    overflow-x: hidden;
+  }
+
 </style>
