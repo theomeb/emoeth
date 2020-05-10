@@ -69,13 +69,7 @@
     <v-responsive class="hidden-md-and-up">
       <mobile-experience
         v-for="experience in experiences" :experience="experience"
-        :display-experience="experience.id < nbExperiencesDisplayed"
-        v-intersect="{
-          handler: onIntersect,
-          options: {threshold: [closeIntersectionThreshold,  intersectionThreshold]
-          }}"
         :key="'mobile-experience-' + experience.id" :id="experience.id"
-        :image-right-aligned="experience.id % 2 === 1"
       ></mobile-experience>
     </v-responsive>
 
@@ -111,6 +105,7 @@
             logo: require('../assets/logos/tum.png'),
             logo_alt: 'TUM Logo',
             logo_width: "70px",
+            mobile_logo_with: "60px",
             missions: [
               {
                 id: 0,
@@ -143,6 +138,7 @@
             logo: require('../assets/logos/hellofresh.svg'),
             logo_alt: 'HelloFresh Logo',
             logo_width: "160px",
+            mobile_logo_with: "150px",
             missions: [
               {
                 id: 0,
@@ -175,6 +171,7 @@
             logo: require('../assets/logos/centralesupelec.png'),
             logo_alt: 'CentraleSupélec Logo',
             logo_width: "100px",
+            mobile_logo_with: "100px",
             missions: [
               {
                 id: 0,
@@ -216,6 +213,7 @@
             logo: require('../assets/logos/theodo.png'),
             logo_alt: 'Theodo Logo',
             logo_width: "80px",
+            mobile_logo_with: "80px",
             missions: [
               {
                 id: 0,
@@ -244,6 +242,7 @@
             logo: require('../assets/logos/lumex.png'),
             logo_alt: 'Lumex Logo',
             logo_width: "140px",
+            mobile_logo_with: "140px",
             missions: [
               {
                 id: 0,
@@ -268,6 +267,7 @@
             logo: require('../assets/logos/pierre_corneille.png'),
             logo_alt: 'Lycee Pierre Corneille Logo',
             logo_width: "50px",
+            mobile_logo_with: "50px",
             missions: [
               {
                 id: 0,
@@ -304,6 +304,7 @@
             logo: require('../assets/logos/education_nationale.png'),
             logo_alt: 'Education Nationale Logo',
             logo_width: "70px",
+            mobile_logo_with: "45px",
             missions: [
               {
                 id: 0,

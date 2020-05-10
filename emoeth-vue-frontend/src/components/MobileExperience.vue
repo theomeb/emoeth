@@ -3,16 +3,60 @@
     justify="center" no-gutters
   >
     <v-col cols="12">
-      <v-parallax
-        :src="experience.illustration"
-      >
-        <v-row
-          align="center"
-          justify="center"
-        >
+      <v-parallax :src="experience.illustration" height="600">
+        <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
-            <h1 class="display-1 font-weight-thin">Vuetify.js</h1>
-            <h4 class="subheading">Build your application today!</h4>
+
+            <div class="experience-content">
+
+              <v-slide-x-transition :appear="true">
+                <v-img
+                  :key="'floating-' + experience.id"
+                  :src="experience.logo"
+                  :alt="experience.logo_alt"
+                  contain
+                  :width="experience.mobile_logo_with"
+                  class="pa-1 floater floater_left"
+                ></v-img>
+              </v-slide-x-transition>
+
+              <v-fade-transition :appear="true">
+                <v-card
+                  :height="$vuetify.breakpoint.xsOnly ? '380px' : '320px'" class=""
+                >
+                  <div align="right">
+                    <v-card-title class="font-weight-medium body-2" style="display: block">
+                      {{experience.title.substring(0, experience.title.search('@'))}}
+                    </v-card-title>
+                    <v-card-subtitle class="font-weight-medium body-2 py-0">
+                      {{experience.title.substring(experience.title.search('@'),
+                      experience.title.length)}}
+                    </v-card-subtitle>
+                    <v-card-subtitle class="py-0">{{experience.dates}}</v-card-subtitle>
+                  </div>
+
+                  <v-card-text align="left" class="px-2">
+                    <v-list-item three-line>
+                      <v-list-item-content>
+                        <v-list-item-title
+                          class="font-weight-regular text-uppercase subtitle-1"
+                          style="white-space: normal; line-height: 1"
+                        >
+                          {{experience.subtitle}}
+                        </v-list-item-title>
+                        <v-list-item-subtitle
+                          v-for="mission in experience.missions"
+                          :key="'mission-' + mission.id" v-html="mission.action"
+                          v-bind:class="[$vuetify.breakpoint.xsOnly ? 'mission' : '', 'font-weight-light']"
+                        >
+                        </v-list-item-subtitle>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-card-text>
+                </v-card>
+              </v-fade-transition>
+            </div>
+
           </v-col>
         </v-row>
       </v-parallax>
@@ -25,8 +69,6 @@
     name: "MobileExperience",
     props: {
       experience: Object,
-      displayExperience: Boolean,
-      imageRightAligned: Boolean,
     }
   }
 </script>
@@ -73,8 +115,9 @@
     left: 15px;
   }
 
-  .floater_right {
-    right: 15px;
+  .mission {
+    -webkit-line-clamp: 5 !important;
+    font-size: 12px;
   }
 
   /*For transitions*/
