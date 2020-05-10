@@ -14,3 +14,4 @@
 [2020-05-04 15:02:39] Build v0.24 deployed.
 [2020-05-04 15:09:15] Build v0.25 deployed.
 [2020-05-07 19:44:52] Build v0.26 deployed.
+[2020-05-10 12:46:25] Build v0.27 deployed.
