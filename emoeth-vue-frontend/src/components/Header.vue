@@ -4,7 +4,7 @@
       app
       color="white"
       elevate-on-scroll
-      class="px-4 px-lg-12"
+      class="px-0 px-lg-8"
     >
       <div class="d-flex align-center">
         <v-img

@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="pa-0">
 
-    <v-row justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12">
+    <v-row justify="center" no-gutters class="px-4 px-lg-12 mx-lg-12 mt-4">
       <v-col cols="12" md="5" align="left" align-self="center" class="d-flex">
         <v-avatar size="80" class="hidden-sm-and-down">
           <v-img :src="avatarLink"></v-img>
