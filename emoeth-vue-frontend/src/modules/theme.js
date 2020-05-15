@@ -1,6 +1,7 @@
 export default {
   light: {
     primary: 'rgb(60, 69, 75)',
+    dark: 'rgb(60, 69, 75)',
     secondary: 'rgb(255, 64, 64)',
     accent: 'rgb(92, 196, 255)',
     error: '#FF5252',

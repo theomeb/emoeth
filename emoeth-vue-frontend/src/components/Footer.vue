@@ -4,7 +4,8 @@
       flat
       tile
       width="100%"
-      class="secondary text-center"
+      class="text-center"
+      :color="theme.light.dark"
     >
       <v-container class="pa-1">
         <v-row justify="center" class="white--text" align-it="center">
@@ -22,8 +23,15 @@
 </template>
 
 <script>
+  import theme from "../modules/theme";
+
   export default {
-    name: "Footer"
+    name: "Footer",
+    data() {
+      return {
+        theme: theme
+      }
+    },
   }
 </script>
 
