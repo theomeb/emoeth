@@ -3,7 +3,10 @@
     justify="center" no-gutters
   >
     <v-col cols="12">
-      <v-parallax :src="experience.illustration" height="600">
+      <v-parallax
+        :src="experience.illustration" :v-src="experience.lazy_illustration"
+        eager
+      >
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
 

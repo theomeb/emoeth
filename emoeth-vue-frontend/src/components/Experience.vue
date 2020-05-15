@@ -21,7 +21,7 @@
         >
           <v-img
             height="320px" :lazy-src="experience.lazy_illustration" :src="experience.illustration"
-            :alt="experience.alt"
+            :alt="experience.alt" eager
           ></v-img>
 
         </v-card>
@@ -31,29 +31,18 @@
     <v-col cols="7" lg="6" class="justify-center d-flex">
       <div class="experience-content">
 
-        <v-slide-x-transition :appear="true" v-if="imageRightAligned">
+        <v-slide-x-transition :appear="true">
           <v-img
             v-if="displayExperience"
             :key="'floating-' + experience.id"
             :src="experience.logo"
+            eager
             :alt="experience.logo_alt"
             contain
             :width="experience.logo_width"
-            class="pa-1 floater floater_left"
+            v-bind:class="['pa-1 floater', imageRightAligned ? 'floater_left' : 'floater_right']"
           ></v-img>
         </v-slide-x-transition>
-
-        <v-slide-x-reverse-transition :appear="true" v-else>
-          <v-img
-            v-if="displayExperience"
-            :key="'floating-' + experience.id"
-            :src="experience.logo"
-            :alt="experience.logo_alt"
-            contain
-            :width="experience.logo_width"
-            class="pa-1 floater floater_right"
-          ></v-img>
-        </v-slide-x-reverse-transition>
 
         <v-fade-transition :appear="true">
           <v-card
@@ -99,7 +88,7 @@
         >
           <v-img
             height="320px" :lazy-src="experience.lazy_illustration" :src="experience.illustration"
-            :alt="experience.alt"
+            :alt="experience.alt" eager
           ></v-img>
 
         </v-card>
