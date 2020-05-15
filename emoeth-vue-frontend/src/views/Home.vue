@@ -46,7 +46,7 @@
             <v-card
               :elevation="!hover ? 2 : 10"
               max-width="250"
-              :color="theme.light.info"
+              :color="theme.light.primary"
               to="about"
             >
               <v-list-item>
@@ -75,7 +75,7 @@
             <v-card
               :elevation="!hover ? 2 : 10"
               max-width="250"
-              :color="theme.light.warning"
+              :color="theme.light.secondary"
               to="blog"
             >
               <v-list-item>
@@ -103,7 +103,7 @@
             <v-card
               :elevation="!hover ? 2 : 10"
               max-width="250"
-              :color="theme.light.error"
+              :color="theme.light.accent"
               to="projects"
               disabled
             >
@@ -132,7 +132,7 @@
             <v-card
               :elevation="!hover ? 2 : 10"
               max-width="250"
-              :color="theme.light.info"
+              :color="theme.light.primary"
               to="about"
             >
               <v-list-item>
@@ -161,7 +161,7 @@
             <v-card
               :elevation="!hover ? 2 : 10"
               max-width="250"
-              :color="theme.light.warning"
+              :color="theme.light.secondary"
               to="blog"
             >
               <v-list-item>
@@ -188,7 +188,7 @@
             <v-card
               :elevation="!hover ? 2 : 10"
               max-width="250"
-              :color="theme.light.error"
+              :color="theme.light.accent"
               to="projects"
               disabled
             >

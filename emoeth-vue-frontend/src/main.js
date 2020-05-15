@@ -23,7 +23,7 @@ Vue.use(Vuesax, {
     success: theme.light.success,
     warning: theme.light.warning,
     danger: theme.light.error,
-    dark: theme.light.secondary
+    dark: theme.light.primary
   }
 })
 ;

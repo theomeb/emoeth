@@ -1,8 +1,8 @@
 export default {
   light: {
-    primary: '#1976D2',
-    secondary: '#424242',
-    accent: '#82B1FF',
+    primary: 'rgb(60, 69, 75)',
+    secondary: 'rgb(255, 64, 64)',
+    accent: 'rgb(92, 196, 255)',
     error: '#FF5252',
     info: '#2196F3',
     success: '#4CAF50',

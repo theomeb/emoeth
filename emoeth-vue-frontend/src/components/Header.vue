@@ -18,7 +18,7 @@
         />
 
         <v-fade-transition :appear="true">
-          <h1
+          <h2
             v-if="displayTitle"
             class="shrink mt-1 font-weight-thin pl-1"
             min-width="100"
@@ -26,7 +26,7 @@
             transition="scale-transition"
           >
             {{displayedTitle}}
-          </h1>
+          </h2>
         </v-fade-transition>
 
       </div>
