@@ -25,7 +25,7 @@
 
               <v-fade-transition :appear="true">
                 <v-card
-                  :height="$vuetify.breakpoint.xsOnly ? '380px' : '320px'" class=""
+                  height="100%"
                 >
                   <div align="right">
                     <v-card-title class="font-weight-medium body-2" style="display: block">
