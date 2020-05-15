@@ -17,14 +17,18 @@
           title="Icon made by Freepik on Flaticon"
         />
 
-        <h1
-          class="shrink mt-1 font-weight-thin pl-1"
-          min-width="100"
-          width="100"
-          transition="scale-transition"
-        >
-          Emoeth
-        </h1>
+        <v-fade-transition :appear="true">
+          <h1
+            v-if="displayTitle"
+            class="shrink mt-1 font-weight-thin pl-1"
+            min-width="100"
+            width="100"
+            transition="scale-transition"
+          >
+            {{displayedTitle}}
+          </h1>
+        </v-fade-transition>
+
       </div>
 
       <v-spacer></v-spacer>
@@ -244,13 +248,29 @@
             disabled: false,
 
           },
-        ]
+        ],
+        titles: {
+          landing: 'Théomé B.',
+          home: 'Théomé B.',
+          about: 'About me',
+          blog: 'Blog'
+        },
+        displayTitle: true
       };
     },
-    mounted() {
-
+    computed: {
+      displayedTitle() {
+        return this.titles[this.$route.name];
+      }
     },
-    methods: {}
+    watch: {
+      displayedTitle: function () {
+        this.displayTitle = false;
+        setTimeout(() => {
+          this.displayTitle = true;
+        }, 500);
+      }
+    }
   }
 </script>
 
