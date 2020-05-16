@@ -3,7 +3,7 @@
   <v-slide-x-transition>
     <v-snackbar
       v-model="showSnackbar" bottom left color="error"
-      class="snackbar-transition" :key="snackbarKey" :timeout="0"
+      class="snackbar-transition caption" :key="snackbarKey" :timeout="0"
     >
       <v-icon class="mr-3" color="white" small>fas fa-circle-notch fa-spin</v-icon>
       {{ text }}
