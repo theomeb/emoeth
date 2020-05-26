@@ -33,16 +33,29 @@
 
         <v-slide-x-transition :appear="true">
           <v-img
-            v-if="displayExperience"
+            v-if="displayExperience && imageRightAligned"
             :key="'floating-' + experience.id"
             :src="experience.logo"
             eager
             :alt="experience.logo_alt"
             contain
             :width="experience.logo_width"
-            v-bind:class="['pa-1 floater', imageRightAligned ? 'floater_left' : 'floater_right']"
+            class="pa-1 floater floater_left"
           ></v-img>
         </v-slide-x-transition>
+
+        <v-slide-x-reverse-transition :appear="true">
+          <v-img
+            v-if="displayExperience && !imageRightAligned"
+            :key="'floating-' + experience.id"
+            :src="experience.logo"
+            eager
+            :alt="experience.logo_alt"
+            contain
+            :width="experience.logo_width"
+            class="pa-1 floater floater_right"
+          ></v-img>
+        </v-slide-x-reverse-transition>
 
         <v-fade-transition :appear="true">
           <v-card
