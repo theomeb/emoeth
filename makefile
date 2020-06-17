@@ -17,4 +17,4 @@ deploy_vue_front_on_AWS:
 	echo \- BUILDING THE FRONT APPLICATION; cd emoeth-vue-frontend; npm run build; cd ..; \
 	echo [$$(date '+%Y-%m-%d %H:%M:%S')] Build v$(version) deployed. >> deploy_logs.txt ;\
 	echo \- PUSHING STATIC FILES - v$(version); git add emoeth-vue-frontend/dist; git add deploy_logs.txt; git commit -m "Deploy v$(version)"; git push;\
-	echo \- DEPLOYING v$(version) TO AWS ; aws s3 cp emoeth-vue-frontend/dist/ s3://emoeth.tech/ --recursive --profile perso 
+	echo \- DEPLOYING v$(version) TO AWS ; aws s3 cp emoeth-vue-frontend/dist/ s3://emoeth.tech/ --recursive --profile perso
