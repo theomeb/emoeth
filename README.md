@@ -16,7 +16,7 @@
 - The real one: `emoeth-vue-frontend`
 
 
-## Let's develop
+## Development
 
 ```bash
 
