@@ -30,7 +30,9 @@ npm install
 npm run serve
 ```
 
-## Deploy on Github pages
+
+## Deployment
+### AWS s3
 
 1. Go on root repository folder: `cd emoeth/emoeth-vue-front-end`
 2. Simply launch the make command with the appopriate version tag: `make deploy_vue_front version=<NEXT_VERSION>`
@@ -38,13 +40,10 @@ npm run serve
 
 That's it, now the site gets deployed automatically.
 
+### Github pages
+*0. Prior to the deployment, you need to change in `vue.config.js` the following: `publicPath: process.env.NODE_ENV === 'production' ? '/emoeth/' : '/',`*
+1. Go on root repository folder: `cd emoeth/emoeth-vue-front-end`
+2. Simply launch the make command with the appopriate version tag: `deploy_vue_front_on_github_pages version=<NEXT_VERSION>`
+3. *Deploy logs are saved in [deploy_logs.txt](./deploy_logs.txt)*
 
-## Deploy with Netlify
-
-Import your site in Netlify
-
-1. Create a new site in Netlify and import your repository.
-2. Set the build command to: `npm run build`
-3. Set the publish directory to: `dist`
-
-That's it, now your site gets deployed automatically on `git push`.
+That's it, now the site gets deployed automatically.
