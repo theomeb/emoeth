@@ -14,7 +14,7 @@
             contain class="mt-1 french-flag"
           ></v-img>
           <div class="ml-3 font-weight-light caption">
-            {{ new Date().getFullYear() }} — <strong> Emoeth Dev.</strong>
+            {{ new Date().getFullYear() }} — <strong> Emoeth Dev.</strong> — v1.7
           </div>
         </v-row>
       </v-container>
