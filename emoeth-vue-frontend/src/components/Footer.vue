@@ -14,7 +14,8 @@
             contain class="mt-1 french-flag"
           ></v-img>
           <div class="ml-3 font-weight-light caption">
-            {{ new Date().getFullYear() }} — <strong> Emoeth Dev.</strong> — v1.7
+            {{ new Date().getFullYear() }} — <strong> Emoeth Dev.</strong>
+            {{version}}
           </div>
         </v-row>
       </v-container>
@@ -29,7 +30,8 @@
     name: "Footer",
     data() {
       return {
-        theme: theme
+        theme: theme,
+        version: process.env.VUE_APP_VERSION,
       }
     },
   }
