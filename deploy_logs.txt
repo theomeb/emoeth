@@ -31,3 +31,4 @@
 [2020-06-28 13:09:14] Build v1.7.1 deployed on AWS S3.
 [2020-06-28 14:09:56] Build v1.7.2 deployed on AWS S3.
 [2020-07-22 22:43:39] Build v1.7.3 deployed on AWS S3.
+[2020-08-08 10:12:57] Build v1.7.4 deployed on AWS S3.
