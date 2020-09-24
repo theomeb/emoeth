@@ -259,7 +259,7 @@
             display: true,
             slug: 'prepa_academic',
             title: 'MPSI/MP* @ Lycée Corneille, Normandie',
-            subtitle: '2 years of preparation',
+            subtitle: '2 years of preparatory classes',
             dates: 'September 2014 - July 2016',
             illustration: require('../assets/illustrations/prepa.jpg'),
             lazy_illustration: require('../assets/illustrations/low_quality/prepa.jpg'),
