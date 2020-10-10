@@ -74,7 +74,7 @@
               <v-list-item three-line>
                 <v-list-item-content>
                   <v-list-item-title
-                    class="font-weight-regular text-uppercase subtitle-1"
+                    class="font-weight-regular subtitle-1"
                     style="white-space: normal; line-height: 1"
                   >
                     {{experience.subtitle}}

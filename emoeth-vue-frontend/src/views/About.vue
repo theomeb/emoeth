@@ -96,9 +96,9 @@
             id: 0,
             display: false,
             slug: 'tum_academic',
-            title: 'MSc Mathematics in Data Science @ TUM',
-            subtitle: 'One of the best European Data Science programs',
-            dates: 'September 2019 - now',
+            title: 'Technische Universität München',
+            subtitle: 'MSc Mathematics in Data Science',
+            dates: 'Munich | Sept. 2019 - now',
             illustration: require('../assets/illustrations/munich.jpg'),
             lazy_illustration: require('../assets/illustrations/low_quality/munich.jpg'),
             alt: 'Munich picture',
@@ -109,19 +109,39 @@
             missions: [
               {
                 id: 0,
-                action: '<b>Data Engineering</b>: Foundations in Data Engineering, Databases and CPU architectures',
+                action: '• Foundations in <b>data engineering</b> and <b>data analysis</b>',
               },
               {
                 id: 1,
-                action: '<b>Data analysis</b>: Foundations in Data Analysis, Applied Regression '
+                action: '<b>Applied mathematics</b>'
               },
               {
                 id: 2,
-                action: '<b>Data analytics</b>: Machine Learning, ML for Graphs and Sequential Data, Deep Learning, Computer Vision (Detection, Segmentation and Tracking)'
+                action: '• Applied regression'
               },
               {
                 id: 3,
-                action: '<b>TUM Data Innovation Lab</b>: Deep Learning for Genetic Risk Prediction'
+                action: '• Probabilistic techniques and algorithms in data analysis'
+              },
+              {
+                id: 4,
+                action: '<b>ML & Computer vision</b>'
+              },
+              {
+                id: 5,
+                action: '• Machine learning, ML for graphs and sequential data'
+              },
+              {
+                id: 6,
+                action: '• Deep learning'
+              },
+              {
+                id: 7,
+                action: '• Computer vision - detection, segmentation and tracking'
+              },
+              {
+                id: 8,
+                action: '<b>TUM Data Innovation Lab</b>: Deep learning for genetic risk prediction'
               }
             ]
           },
@@ -129,9 +149,9 @@
             id: 1,
             display: true,
             slug: 'hellofresh_internship',
-            title: 'OpsTech Developer @ HelloFresh',
-            subtitle: 'Part of a small tech team helping a food-delivery company',
-            dates: 'January - July 2019',
+            title: 'HelloFresh AU',
+            subtitle: 'OpsTech Developer',
+            dates: 'Jan. - July 2019 | Sydney',
             illustration: require('../assets/illustrations/sydney.jpg'),
             lazy_illustration: require('../assets/illustrations/low_quality/sydney.jpg'),
             alt: 'Sydney picture',
@@ -142,18 +162,22 @@
             missions: [
               {
                 id: 0,
-                action: '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes'
+                action: '<b>part of a small tech team helping a food-delivery company</b>'
               },
               {
                 id: 1,
-                action: ' • Gathered customer data to support Customer Care and Finance teams with a dedicated interface'
+                action: '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes'
               },
               {
                 id: 2,
-                action: '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company'
+                action: ' • Gathered customer data to support Customer Care and Finance teams with a dedicated interface'
               },
               {
                 id: 3,
+                action: '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company'
+              },
+              {
+                id: 4,
                 action: '• Mined historical data to improve user experience and support Quality team'
               }
             ]
@@ -161,10 +185,43 @@
           {
             id: 2,
             display: true,
+            slug: 'theodo_internship',
+            title: 'Theodo',
+            subtitle: 'Full-stack Web Developer',
+            dates: 'Paris | July 2018 - Jan. 2019 ',
+            illustration: require('../assets/illustrations/paris.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/paris.jpg'),
+            alt: 'Paris picture',
+            logo: require('../assets/logos/theodo.png'),
+            logo_alt: 'Theodo Logo',
+            logo_width: "80px",
+            mobile_logo_with: "80px",
+            missions: [
+              {
+                id: 0,
+                action: '<b>part of a web-development consulting company</b>'
+              },
+              {
+                id: 1,
+                action: '• Counseled numerous clients to help them build software solving their business problems'
+              },
+              {
+                id: 2,
+                action: ' • Improved in a scrum-organized environment the website of <b>Tarkett</b>, a top multinational specialized in flooring (€2,836 billion revenue)'
+              },
+              {
+                id: 3,
+                action: '• Applied Agile & Lean methods to make continuous improvement'
+              },
+            ]
+          },
+          {
+            id: 3,
+            display: true,
             slug: 'cs_academic',
-            title: 'Master of Engineering @ École Centrale Paris',
-            subtitle: 'One of France’s top-3 engineering schools',
-            dates: 'September 2016 - now',
+            title: 'École Centrale Paris',
+            subtitle: 'Master of Engineering - Grande École',
+            dates: 'Sept. 2016 - now | Paris area',
             illustration: require('../assets/illustrations/centralesupelec.jpg'),
             lazy_illustration: require('../assets/illustrations/low_quality/centralesupelec.jpg'),
             alt: 'CentraleSupélec picture',
@@ -196,36 +253,7 @@
               },
               {
                 id: 5,
-                action: '<b>Innovation project</b>: Mobile application implementation for campus community'
-              },
-            ]
-          },
-          {
-            id: 3,
-            display: true,
-            slug: 'theodo_internship',
-            title: 'Full-stack Web Developer @ Theodo',
-            subtitle: 'Part of a web-development consulting company',
-            dates: 'July 2018 - January 2019',
-            illustration: require('../assets/illustrations/paris.jpg'),
-            lazy_illustration: require('../assets/illustrations/low_quality/paris.jpg'),
-            alt: 'Paris picture',
-            logo: require('../assets/logos/theodo.png'),
-            logo_alt: 'Theodo Logo',
-            logo_width: "80px",
-            mobile_logo_with: "80px",
-            missions: [
-              {
-                id: 0,
-                action: '• Counseled numerous clients to help them build software solving their business problems'
-              },
-              {
-                id: 1,
-                action: ' • Improved in a scrum-organized environment the website of <b>Tarkett</b>, a top multinational specialized in flooring (€2,836 billion revenue)'
-              },
-              {
-                id: 2,
-                action: '• Applied Agile & Lean methods to make continuous improvement'
+                action: '<b>Innovation project</b>: Mobile application implementation for the campus community'
               },
             ]
           },
@@ -233,9 +261,9 @@
             id: 4,
             display: true,
             slug: 'lumex_tv_internship',
-            title: 'Operator Intern @ Lumex TV',
-            subtitle: 'Lighting and power equipment rental company (TV, Cinema, Advertisement)',
-            dates: 'July 2017',
+            title: 'Lumex TV',
+            subtitle: 'Operator intern',
+            dates: 'Paris area | July 2017',
             illustration: require('../assets/illustrations/lumex.jpg'),
             lazy_illustration: require('../assets/illustrations/low_quality/lumex.jpg'),
             alt: 'Blue collar picture',
@@ -246,10 +274,14 @@
             missions: [
               {
                 id: 0,
-                action: '• Worked 4 weeks as a blue-collar worker in a team of 10 operators'
+                action: '<b>Lighting and power equipment rental company (TV, Cinema, Advertisement)</b>'
               },
               {
                 id: 1,
+                action: '• Worked 4 weeks as a blue-collar worker in a team of 10 operators'
+              },
+              {
+                id: 2,
                 action: ' • Carried out repairs on mechanical and electric material, picking/packing orders'
               },
             ]
@@ -258,9 +290,9 @@
             id: 5,
             display: true,
             slug: 'prepa_academic',
-            title: 'MPSI/MP* @ Lycée Corneille, Normandie',
-            subtitle: '2 years of preparatory classes',
-            dates: 'September 2014 - July 2016',
+            title: 'Lycée Pierre Corneille',
+            subtitle: 'MPSI/MP* - 2 years of preparatory classes',
+            dates: 'Sept. 2014 - July 2016 | Rouen, Normandie',
             illustration: require('../assets/illustrations/prepa.jpg'),
             lazy_illustration: require('../assets/illustrations/low_quality/prepa.jpg'),
             alt: 'Prepa picture',
@@ -295,9 +327,9 @@
             id: 6,
             display: true,
             slug: 'baccalaureate_academic',
-            title: 'Scientific High School Diploma',
+            title: 'Lycée Raymond Queneau',
             subtitle: 'French Baccalaureate',
-            dates: 'July 2014',
+            dates: 'Yvetot, Normandie | July 2014',
             illustration: require('../assets/illustrations/normandie.jpg'),
             lazy_illustration: require('../assets/illustrations/low_quality/normandie.jpg'),
             alt: 'Normandie picture',
@@ -308,7 +340,11 @@
             missions: [
               {
                 id: 0,
-                action: '• <b>European section</b>'
+                action: '<b>Scientific High School Diploma</b>'
+              },
+              {
+                id: 0,
+                action: '• European section'
               },
               {
                 id: 1,
