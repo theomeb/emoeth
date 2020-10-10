@@ -11,9 +11,8 @@
   <p align="center">Front-end application for my personal portfolio<p>
 </p>
 
-## Two starters
-- One with Gridsome: `emoeth-gridsome` ([details why I do not use this one](./emoeth-gridsome/README.md))
-- The real one: `emoeth-vue-frontend`
+## Structure
+- Static front-end: `emoeth-vue-frontend`
 
 
 ## Development
