@@ -14,7 +14,7 @@
 
               <v-slide-x-transition :appear="true">
                 <v-img
-                  :key="'floating-' + experience.id"
+                  :key="'floating-' + index"
                   :src="experience.logo"
                   :alt="experience.logo_alt"
                   contain
@@ -48,8 +48,8 @@
                           {{experience.subtitle}}
                         </v-list-item-title>
                         <v-list-item-subtitle
-                          v-for="mission in experience.missions"
-                          :key="'mission-' + mission.id" v-html="mission.action"
+                          v-for="(detail, index) in experience.details"
+                          :key="'mission-' + index" v-html="detail"
                           v-bind:class="[$vuetify.breakpoint.xsOnly ? 'mission' : '', 'font-weight-light']"
                         >
                         </v-list-item-subtitle>
@@ -72,6 +72,7 @@
     name: "MobileExperience",
     props: {
       experience: Object,
+      index: Number
     }
   }
 </script>

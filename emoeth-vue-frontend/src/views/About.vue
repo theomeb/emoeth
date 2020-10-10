@@ -70,7 +70,7 @@
     <v-responsive class="hidden-md-and-up">
       <mobile-experience
         v-for="(experience, index) in experiences" :experience="experience"
-        :key="'mobile-experience-' + index" :id="index"
+        :key="'mobile-experience-' + index" :id="index" :index="index"
       ></mobile-experience>
     </v-responsive>
 

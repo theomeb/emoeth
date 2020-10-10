@@ -34,7 +34,7 @@
         <v-slide-x-transition :appear="true">
           <v-img
             v-if="displayExperience && imageRightAligned"
-            :key="'floating-' + experience.id"
+            :key="'floating-' + index"
             :src="experience.logo"
             eager
             :alt="experience.logo_alt"
@@ -47,7 +47,7 @@
         <v-slide-x-reverse-transition :appear="true">
           <v-img
             v-if="displayExperience && !imageRightAligned"
-            :key="'floating-' + experience.id"
+            :key="'floating-' + index"
             :src="experience.logo"
             eager
             :alt="experience.logo_alt"
