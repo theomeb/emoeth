@@ -80,8 +80,8 @@
                     {{experience.subtitle}}
                   </v-list-item-title>
                   <v-list-item-subtitle
-                    v-for="mission in experience.missions"
-                    :key="'mission-' + mission.id" v-html="mission.action"
+                    v-for="(mission, index) in experience.missions"
+                    :key="'mission-' + index" v-html="mission.action"
                     class="font-weight-light"
                   >
                   </v-list-item-subtitle>
@@ -116,6 +116,7 @@
     name: "Experience",
     props: {
       experience: Object,
+      index: Number,
       displayExperience: Boolean,
       imageRightAligned: Boolean,
     }

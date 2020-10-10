@@ -54,22 +54,23 @@
 
     <v-responsive v-if="showExperiences" class="hidden-sm-and-down">
       <experience
-        v-for="experience in experiences" :experience="experience"
-        :display-experience="experience.id < nbExperiencesDisplayed"
+        v-for="(experience, index) in experiences" :experience="experience"
+        :display-experience="index < nbExperiencesDisplayed"
         v-intersect="{
           handler: onIntersect,
           options: {threshold: [closeIntersectionThreshold,  intersectionThreshold]
           }}"
-        :key="'experience-' + experience.id" :id="experience.id"
-        :image-right-aligned="experience.id % 2 === 1"
+        :key="'experience-' + index" :id="index"
+        :image-right-aligned="index % 2 === 1"
+        :index="index"
       ></experience>
     </v-responsive>
 
 
     <v-responsive class="hidden-md-and-up">
       <mobile-experience
-        v-for="experience in experiences" :experience="experience"
-        :key="'mobile-experience-' + experience.id" :id="experience.id"
+        v-for="(experience, index) in experiences" :experience="experience"
+        :key="'mobile-experience-' + index" :id="index"
       ></mobile-experience>
     </v-responsive>
 
@@ -93,7 +94,6 @@
       return {
         experiences: [
           {
-            id: 0,
             display: false,
             slug: 'tum_academic',
             title: 'Technische Universität München',
@@ -108,45 +108,35 @@
             mobile_logo_with: "60px",
             missions: [
               {
-                id: 0,
                 action: '• Foundations in <b>data engineering</b> and <b>data analysis</b>',
               },
               {
-                id: 1,
                 action: '<b>Applied mathematics</b>'
               },
               {
-                id: 2,
                 action: '• Applied regression'
               },
               {
-                id: 3,
                 action: '• Probabilistic techniques and algorithms in data analysis'
               },
               {
-                id: 4,
                 action: '<b>ML & Computer vision</b>'
               },
               {
-                id: 5,
                 action: '• Machine learning, ML for graphs and sequential data'
               },
               {
-                id: 6,
                 action: '• Deep learning'
               },
               {
-                id: 7,
                 action: '• Computer vision - detection, segmentation and tracking'
               },
               {
-                id: 8,
                 action: '<b>TUM Data Innovation Lab</b>: Deep learning for genetic risk prediction'
               }
             ]
           },
           {
-            id: 1,
             display: true,
             slug: 'hellofresh_internship',
             title: 'HelloFresh AU',
@@ -161,29 +151,23 @@
             mobile_logo_with: "150px",
             missions: [
               {
-                id: 0,
                 action: '<b>part of a small tech team helping a food-delivery company</b>'
               },
               {
-                id: 1,
                 action: '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes'
               },
               {
-                id: 2,
                 action: ' • Gathered customer data to support Customer Care and Finance teams with a dedicated interface'
               },
               {
-                id: 3,
                 action: '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company'
               },
               {
-                id: 4,
                 action: '• Mined historical data to improve user experience and support Quality team'
               }
             ]
           },
           {
-            id: 2,
             display: true,
             slug: 'theodo_internship',
             title: 'Theodo',
@@ -198,25 +182,20 @@
             mobile_logo_with: "80px",
             missions: [
               {
-                id: 0,
                 action: '<b>part of a web-development consulting company</b>'
               },
               {
-                id: 1,
                 action: '• Counseled numerous clients to help them build software solving their business problems'
               },
               {
-                id: 2,
                 action: ' • Improved in a scrum-organized environment the website of <b>Tarkett</b>, a top multinational specialized in flooring (€2,836 billion revenue)'
               },
               {
-                id: 3,
                 action: '• Applied Agile & Lean methods to make continuous improvement'
               },
             ]
           },
           {
-            id: 3,
             display: true,
             slug: 'cs_academic',
             title: 'École Centrale Paris',
@@ -231,34 +210,27 @@
             mobile_logo_with: "100px",
             missions: [
               {
-                id: 0,
                 action: '<b>Maths</b>: Analysis, Probability, Statistics, Partial Differential Equations',
               },
               {
-                id: 1,
                 action: '<b>Computer Science</b>: Machine Learning, Software Development, Algorithms and Programming'
               },
               {
-                id: 2,
                 action: '<b>Business</b>: Economy, Advanced, Corporate Finance, Entrepreneurship, Applications of statistical physics to socio-economical complex\n' +
                   'systems'
               },
               {
-                id: 3,
                 action: '<b>Physics</b>: Heat Transfer, Thermodynamics, Quantum and Statistical Physics, Life Science'
               },
               {
-                id: 4,
                 action: '<b>Engineering</b>: Embedded Control Systems, Sustainable Development, Design of Mechanical Structures Laboratory, Civil Engineering'
               },
               {
-                id: 5,
                 action: '<b>Innovation project</b>: Mobile application implementation for the campus community'
               },
             ]
           },
           {
-            id: 4,
             display: true,
             slug: 'lumex_tv_internship',
             title: 'Lumex TV',
@@ -273,21 +245,17 @@
             mobile_logo_with: "140px",
             missions: [
               {
-                id: 0,
                 action: '<b>Lighting and power equipment rental company (TV, Cinema, Advertisement)</b>'
               },
               {
-                id: 1,
                 action: '• Worked 4 weeks as a blue-collar worker in a team of 10 operators'
               },
               {
-                id: 2,
                 action: ' • Carried out repairs on mechanical and electric material, picking/packing orders'
               },
             ]
           },
           {
-            id: 5,
             display: true,
             slug: 'prepa_academic',
             title: 'Lycée Pierre Corneille',
@@ -302,29 +270,23 @@
             mobile_logo_with: "50px",
             missions: [
               {
-                id: 0,
                 action: '<b>for the highly competitive entrance exams to the French Grandes Écoles</b>'
               },
               {
-                id: 1,
                 action: '• Mathematics'
               },
               {
-                id: 2,
                 action: '• Physics'
               },
               {
-                id: 3,
                 action: '• Computer Science'
               },
               {
-                id: 4,
                 action: '• Philosophy and General Culture'
               }
             ]
           },
           {
-            id: 6,
             display: true,
             slug: 'baccalaureate_academic',
             title: 'Lycée Raymond Queneau',
@@ -339,15 +301,12 @@
             mobile_logo_with: "45px",
             missions: [
               {
-                id: 0,
                 action: '<b>Scientific High School Diploma</b>'
               },
               {
-                id: 0,
                 action: '• European section'
               },
               {
-                id: 1,
                 action: ' • Graduated with highest honors – <b>19,47/20</b>'
               },
             ]
