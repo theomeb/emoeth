@@ -34,3 +34,4 @@
 [2020-08-08 10:12:57] Build v1.7.4 deployed on AWS S3.
 [2020-09-24 18:32:02] Build v1.7.5 deployed on AWS S3.
 [2020-09-24 18:36:54] Build v1.7.6 deployed on AWS S3.
+[2020-10-10 17:11:45] Back API v0.1.1 deployed on AWS Lambda.

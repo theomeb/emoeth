@@ -8,7 +8,7 @@ def hello_world():
     return 'Hello World!'
 
 
-@app.route('/say-my-name')
+@app.route('/yo')
 def say_my_name():
     return f"Hey {request.args.get('name', 'there')} !"
 
