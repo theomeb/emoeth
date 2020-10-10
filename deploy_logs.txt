@@ -37,3 +37,4 @@
 [2020-10-10 17:11:45] Back API v0.1.1 deployed on AWS Lambda.
 [2020-10-10 19:20:00] Front build v1.7.7 deployed on AWS S3.
 [2020-10-10 19:35:55] Front build v1.7.8 deployed on AWS S3.
+[2020-10-10 19:41:12] Front build v1.7.9 deployed on AWS S3.
