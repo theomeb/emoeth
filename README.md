@@ -12,10 +12,12 @@
 </p>
 
 ## Structure
-- Static front-end: `emoeth-vue-frontend`
-
+- Static front-end `emoeth-vue-frontend`
+- API `api-emoeth`: back deployed on an AWS Lambda
 
 ## Development
+
+- Front-end
 
 ```bash
 
@@ -27,6 +29,24 @@ npm install
 
 # Start local dev server
 npm run serve
+```
+
+- API
+
+```bash
+
+# cd into the api directory
+cd emoeth/api-emoeth
+
+# install dependencies
+pip install -r requirements.txt
+
+# also install serverless framework and required plugins
+sls plugin install -n serverless-wsgi
+sls plugin install -n serverless-python-requirements
+
+# Start local dev server
+sls wgsi serve
 ```
 
 
