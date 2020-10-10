@@ -106,34 +106,16 @@
             logo_alt: 'TUM Logo',
             logo_width: "70px",
             mobile_logo_with: "60px",
-            missions: [
-              {
-                action: '• Foundations in <b>data engineering</b> and <b>data analysis</b>',
-              },
-              {
-                action: '<b>Applied mathematics</b>'
-              },
-              {
-                action: '• Applied regression'
-              },
-              {
-                action: '• Probabilistic techniques and algorithms in data analysis'
-              },
-              {
-                action: '<b>ML & Computer vision</b>'
-              },
-              {
-                action: '• Machine learning, ML for graphs and sequential data'
-              },
-              {
-                action: '• Deep learning'
-              },
-              {
-                action: '• Computer vision - detection, segmentation and tracking'
-              },
-              {
-                action: '<b>TUM Data Innovation Lab</b>: Deep learning for genetic risk prediction'
-              }
+            details: [
+              '• Foundations in <b>data engineering</b> and <b>data analysis</b>',
+              '<b>Applied mathematics</b>',
+              '• Applied regression',
+              '• Probabilistic techniques and algorithms in data analysis',
+              '<b>ML & Computer vision</b>',
+              '• Machine learning, ML for graphs and sequential data',
+              '• Deep learning',
+              '• Computer vision - detection, segmentation and tracking',
+              '<b>TUM Data Innovation Lab</b>: Deep learning for genetic risk prediction'
             ]
           },
           {
@@ -149,22 +131,12 @@
             logo_alt: 'HelloFresh Logo',
             logo_width: "160px",
             mobile_logo_with: "150px",
-            missions: [
-              {
-                action: '<b>part of a small tech team helping a food-delivery company</b>'
-              },
-              {
-                action: '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes'
-              },
-              {
-                action: ' • Gathered customer data to support Customer Care and Finance teams with a dedicated interface'
-              },
-              {
-                action: '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company'
-              },
-              {
-                action: '• Mined historical data to improve user experience and support Quality team'
-              }
+            details: [
+              '<b>part of a small tech team helping a food-delivery company</b>',
+              '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes',
+              '• Gathered customer data to support Customer Care and Finance teams with a dedicated interface',
+              '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company',
+              '• Mined historical data to improve user experience and support Quality team'
             ]
           },
           {
@@ -180,19 +152,11 @@
             logo_alt: 'Theodo Logo',
             logo_width: "80px",
             mobile_logo_with: "80px",
-            missions: [
-              {
-                action: '<b>part of a web-development consulting company</b>'
-              },
-              {
-                action: '• Counseled numerous clients to help them build software solving their business problems'
-              },
-              {
-                action: ' • Improved in a scrum-organized environment the website of <b>Tarkett</b>, a top multinational specialized in flooring (€2,836 billion revenue)'
-              },
-              {
-                action: '• Applied Agile & Lean methods to make continuous improvement'
-              },
+            details: [
+              '<b>part of a web-development consulting company</b>',
+              '• Counseled numerous clients to help them build software solving their business problems',
+              '• Improved in a scrum-organized environment the website of <b>Tarkett</b>, a top multinational specialized in flooring (€2,836 billion revenue)',
+              '• Applied Agile & Lean methods to make continuous improvement'
             ]
           },
           {
@@ -208,26 +172,14 @@
             logo_alt: 'CentraleSupélec Logo',
             logo_width: "100px",
             mobile_logo_with: "100px",
-            missions: [
-              {
-                action: '<b>Maths</b>: Analysis, Probability, Statistics, Partial Differential Equations',
-              },
-              {
-                action: '<b>Computer Science</b>: Machine Learning, Software Development, Algorithms and Programming'
-              },
-              {
-                action: '<b>Business</b>: Economy, Advanced, Corporate Finance, Entrepreneurship, Applications of statistical physics to socio-economical complex\n' +
-                  'systems'
-              },
-              {
-                action: '<b>Physics</b>: Heat Transfer, Thermodynamics, Quantum and Statistical Physics, Life Science'
-              },
-              {
-                action: '<b>Engineering</b>: Embedded Control Systems, Sustainable Development, Design of Mechanical Structures Laboratory, Civil Engineering'
-              },
-              {
-                action: '<b>Innovation project</b>: Mobile application implementation for the campus community'
-              },
+            details: [
+              '<b>Maths</b>: Analysis, Probability, Statistics, Partial Differential Equations', ,
+              '<b>Computer Science</b>: Machine Learning, Software Development, Algorithms and Programming',
+              '<b>Business</b>: Economy, Advanced, Corporate Finance, Entrepreneurship, Applications of statistical physics to socio-economical complex\n' +
+              'systems',
+              '<b>Physics</b>: Heat Transfer, Thermodynamics, Quantum and Statistical Physics, Life Science',
+              '<b>Engineering</b>: Embedded Control Systems, Sustainable Development, Design of Mechanical Structures Laboratory, Civil Engineering',
+              '<b>Innovation project</b>: Mobile application implementation for the campus community'
             ]
           },
           {
@@ -243,16 +195,10 @@
             logo_alt: 'Lumex Logo',
             logo_width: "140px",
             mobile_logo_with: "140px",
-            missions: [
-              {
-                action: '<b>Lighting and power equipment rental company (TV, Cinema, Advertisement)</b>'
-              },
-              {
-                action: '• Worked 4 weeks as a blue-collar worker in a team of 10 operators'
-              },
-              {
-                action: ' • Carried out repairs on mechanical and electric material, picking/packing orders'
-              },
+            details: [
+              '<b>Lighting and power equipment rental company (TV, Cinema, Advertisement)</b>',
+              '• Worked 4 weeks as a blue-collar worker in a team of 10 operators',
+              '• Carried out repairs on mechanical and electric material, picking/packing orders',
             ]
           },
           {
@@ -268,22 +214,12 @@
             logo_alt: 'Lycee Pierre Corneille Logo',
             logo_width: "50px",
             mobile_logo_with: "50px",
-            missions: [
-              {
-                action: '<b>for the highly competitive entrance exams to the French Grandes Écoles</b>'
-              },
-              {
-                action: '• Mathematics'
-              },
-              {
-                action: '• Physics'
-              },
-              {
-                action: '• Computer Science'
-              },
-              {
-                action: '• Philosophy and General Culture'
-              }
+            details: [
+              '<b>for the highly competitive entrance exams to the French Grandes Écoles</b>',
+              '• Mathematics',
+              '• Physics',
+              '• Computer Science',
+              '• Philosophy and General Culture'
             ]
           },
           {
@@ -299,16 +235,10 @@
             logo_alt: 'Education Nationale Logo',
             logo_width: "70px",
             mobile_logo_with: "45px",
-            missions: [
-              {
-                action: '<b>Scientific High School Diploma</b>'
-              },
-              {
-                action: '• European section'
-              },
-              {
-                action: ' • Graduated with highest honors – <b>19,47/20</b>'
-              },
+            details: [
+              '<b>Scientific High School Diploma</b>',
+              '• European section',
+              '• Graduated with highest honors – <b>19,47/20</b>'
             ]
           }
         ],

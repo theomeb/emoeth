@@ -80,8 +80,8 @@
                     {{experience.subtitle}}
                   </v-list-item-title>
                   <v-list-item-subtitle
-                    v-for="(mission, index) in experience.missions"
-                    :key="'mission-' + index" v-html="mission.action"
+                    v-for="(detail, index) in experience.details"
+                    :key="'detail-' + index" v-html="detail"
                     class="font-weight-light"
                   >
                   </v-list-item-subtitle>
