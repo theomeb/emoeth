@@ -8,7 +8,7 @@
   </div>
   
   <h3 align="center">Vue + Vuetify (and Vuesax)</h3>
-  <p align="center">Front-end application for my personal portfolio<p>
+  <p align="center">Front-end site for my personal portfolio/showcase + back API to support it.<p>
 </p>
 
 ## Structure
