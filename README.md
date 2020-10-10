@@ -51,13 +51,21 @@ sls wgsi serve
 
 
 ## Deployment
-### AWS s3
+### AWS S3 - Front
 
-1. Go on root repository folder: `cd emoeth/emoeth-vue-front-end`
-2. Simply launch the make command with the appopriate version tag: `make deploy_vue_front_on_AWS version=<NEXT_VERSION>`
+1. Go on root repository folder: `cd emoeth`
+2. Simply launch the make command with the appropriate front version tag: `make deploy_vue_front_on_AWS_S3 version=<NEXT_VERSION>`
 3. *Deploy logs are saved in [deploy_logs.txt](./deploy_logs.txt)*
 
-That's it, now the site gets deployed automatically.
+That's it, now the front site gets deployed automatically.
+
+### AWS Lambda - Back
+
+1. Go on root repository folder: `cd emoeth`
+2. Simply launch the make command with the appropriate back version tag: `make deploy_back_on_AWS_lambda version=<NEXT_VERSION>`
+3. *Deploy logs are saved in [deploy_logs.txt](./deploy_logs.txt)*
+
+That's it, now the back gets deployed automatically to AWS Lambda.
 
 ### Github pages
 *0. Prior to the deployment, you need to change in `vue.config.js` the following: `publicPath: process.env.NODE_ENV === 'production' ? '/emoeth/' : '/',`*

@@ -12,7 +12,7 @@ deploy_vue_front_on_github_pages:
 	echo \- DEPLOYING v$(version) TO GITHUB PAGES ; git subtree push --prefix emoeth-vue-frontend/dist origin gh-pages
 
 
-deploy_vue_front_on_AWS:
+deploy_vue_front_on_AWS_S3:
 	@echo \- DEPLOYING VUE FRONT ON AWS \| Project: $(project) - Version: v$(version); \
 	echo \- PULLING THE BRANCH - MASTER; git checkout master; git pull; \
 	echo \- UPDATING APP VERSION; json -I -f emoeth-vue-frontend/package.json -e 'this.version="$(version)"'; \
@@ -26,7 +26,6 @@ deploy_back_on_AWS_lambda:
 	@echo \- DEPLOYING BACK ON AWS LAMBDA \| Project: $(project) - Version: v$(version); \
 	echo \- PULLING THE BRANCH - MASTER; git checkout master; git pull; \
 	echo \- UPDATING APP VERSION; json -I -f api-emoeth/package.json -e 'this.version="$(version)"'; \
-	echo \- DEPLOYING BACK APP TO LAMBDA; export AWS_PROFILE=perso; sls deploy; export AWS_PROFILE=default
-	echo \- BUILDING THE BACK APPLICATION; cd emoeth-vue-frontend; npm run build; cd ..; \
+	echo \- DEPLOYING BACK APP TO LAMBDA; export AWS_PROFILE=perso; cd api-emoeth; sls deploy; export AWS_PROFILE=default; cd ..;\
 	echo [$$(date '+%Y-%m-%d %H:%M:%S')] Back API v$(version) deployed on AWS Lambda. >> deploy_logs.txt ;\
 	echo \- PUSHING LOGS - v$(version); git add deploy_logs.txt api-emoeth/package.json; git commit -m "Back to Lambda deploy v$(version)"; git push
