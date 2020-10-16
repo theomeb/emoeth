@@ -18,13 +18,14 @@
               :loading="CVLoading"
               href="theome_borck_cv.pdf"
               download
+              target="blank"
               @click="triggerCVLoading"
             >
               <v-icon small class="pr-2">fas fa-file-pdf</v-icon>
               Over here to get my CV!
               <template v-slot:loader>
                 <span class="cv-download-loader">
-                  <v-icon small>fas fa-circle-notch fa-spin</v-icon>
+                  <v-icon small>mdi-cached fas fa-spin</v-icon>
                 </span>
               </template>
             </v-btn>
