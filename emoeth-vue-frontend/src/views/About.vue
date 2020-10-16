@@ -24,7 +24,7 @@
               Over here to get my CV!
               <template v-slot:loader>
                 <span class="cv-download-loader">
-                  <v-icon small>fas fa-sync fa-spin</v-icon>
+                  <v-icon small>mdi-cached fas fa-spin</v-icon>
                 </span>
               </template>
             </v-btn>
