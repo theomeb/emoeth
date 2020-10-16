@@ -7,11 +7,27 @@
           <v-img :src="avatarLink"></v-img>
         </v-avatar>
         <div class="align-self-center">
-          <div class="display-1 font-weight-light hidden-sm-and-down pl-4">
-            Théomé Borck
-          </div>
-          <div class="display-1 font-weight-light hidden-md-and-up">
-            Théomé Borck
+          <div class="display-1 font-weight-light pl-xs-0 pl-md-4">
+            <p class="font-weight-light mb-0">Théomé Borck</p>
+            <v-btn
+              loading
+              elevation="2"
+              outlined
+              small
+              tile
+              :loading="CVLoading"
+              href="theome_borck_cv.pdf"
+              download
+              @click="triggerCVLoading"
+            >
+              <v-icon small class="pr-2">fas fa-file-pdf</v-icon>
+              Over here to get my CV!
+              <template v-slot:loader>
+                <span class="cv-download-loader">
+                  <v-icon light>mdi-cached</v-icon>
+                </span>
+              </template>
+            </v-btn>
           </div>
         </div>
         <v-spacer></v-spacer>
@@ -247,6 +263,7 @@
         closeIntersectionThreshold: 0.5,
         showExperiences: false,
         avatarLink: require('../assets/pp.jpg'),
+        CVLoading: false,
       }
     },
     methods: {
@@ -263,6 +280,12 @@
             this.nbExperiencesDisplayed -= 1;
           }
         }
+      },
+      triggerCVLoading() {
+        this.CVLoading = true;
+        setTimeout(() => {
+          this.CVLoading = false
+        }, 1200)
       }
     },
     mounted() {
@@ -274,5 +297,46 @@
 </script>
 
 <style scoped>
+
+  .cv-download-loader {
+    animation: loader 1s infinite;
+    display: flex;
+  }
+
+  @-moz-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @-webkit-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @-o-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
 </style>
