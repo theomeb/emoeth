@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Vuesax from 'vuesax';
+import vsButton from 'vuesax';
 import 'vuesax/dist/vuesax.css';
 import Vuetify from 'vuetify/lib';
 import theme from './modules/theme'
@@ -17,7 +17,7 @@ const vuetify = new Vuetify({
   }
 });
 
-Vue.use(Vuesax, {
+Vue.use(vsButton, {
   colors: {
     primary: theme.light.primary,
     success: theme.light.success,
