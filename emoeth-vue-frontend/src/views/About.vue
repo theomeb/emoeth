@@ -152,7 +152,6 @@
             ]
           },
           {
-            display: true,
             slug: 'hellofresh_internship',
             title: 'HelloFresh AU',
             subtitle: 'OpsTech Developer',
@@ -171,7 +170,6 @@
             ]
           },
           {
-            display: true,
             slug: 'theodo_internship',
             title: 'Theodo',
             subtitle: 'Full-stack Web Developer',
@@ -190,7 +188,6 @@
             ]
           },
           {
-            display: true,
             slug: 'cs_academic',
             title: 'École Centrale Paris',
             subtitle: 'Master of Engineering - Grande École',
@@ -212,7 +209,6 @@
             ]
           },
           {
-            display: true,
             slug: 'lumex_tv_internship',
             title: 'Lumex TV',
             subtitle: 'Operator intern',
@@ -231,7 +227,6 @@
             ]
           },
           {
-            display: true,
             slug: 'prepa_academic',
             title: 'Lycée Pierre Corneille',
             subtitle: 'MPSI/MP* - 2 years of preparatory classes',
@@ -252,7 +247,6 @@
             ]
           },
           {
-            display: true,
             slug: 'baccalaureate_academic',
             title: 'Lycée Raymond Queneau',
             subtitle: 'French Baccalaureate',
