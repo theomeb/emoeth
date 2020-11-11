@@ -5,14 +5,14 @@
       v-model="showSnackbar" bottom left color="error"
       class="snackbar-transition caption" :key="snackbarKey" :timeout="0"
     >
-      <v-icon class="mr-3" color="white" small>fas fa-circle-notch fa-spin</v-icon>
+      <font-awesome-icon :icon="['fas', 'circle-notch']" spin class="fa-spin mr-3" size="lg"/>
       {{ text }}
       <v-btn
         color="error" class="mr-2"
         fab x-small outlined
         @click="closeSnackbar()"
       >
-        <v-icon color="white">fas fa-times</v-icon>
+        <font-awesome-icon :icon="['fas', 'times']" size="lg" style="color: white"/>
       </v-btn>
     </v-snackbar>
   </v-slide-x-transition>
@@ -54,6 +54,11 @@
 
   .snackbar-transition {
     transition-duration: 1s;
+  }
+
+  .fa-spin {
+    transition-duration: 1s;
+    color: white;
   }
 
 </style>

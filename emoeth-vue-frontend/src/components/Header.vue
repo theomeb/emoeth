@@ -38,7 +38,7 @@
 
           <vs-button class="hidden-md-and-up mr-0" size="xl" color="dark" transparent
                      @click="mobileDrawer=true">
-            <i class="fas fa-bars"></i>
+            <font-awesome-icon :icon="['fas', 'bars']"/>
           </vs-button>
 
           <div id="desktop-menu" class="hidden-sm-and-down d-md-flex pr-lg-12">
@@ -53,7 +53,7 @@
               >
                 {{pageItem.title}}
                 <template #animate>
-                  <i :class='pageItem.icon'></i>
+                  <font-awesome-icon :icon="pageItem.icon" size="lg"/>
                 </template>
               </vs-button>
               <vs-button
@@ -62,7 +62,7 @@
               >
                 {{pageItem.title}}
                 <template #animate>
-                  <i :class='pageItem.icon'></i>
+                  <font-awesome-icon :icon="pageItem.icon" size="lg"/>
                 </template>
               </vs-button>
             </div>
@@ -76,7 +76,7 @@
                 icon :color="socialNetworkItem.color" :href="socialNetworkItem.link" blank
                 :disabled="socialNetworkItem.disabled"
               >
-                <i :class='socialNetworkItem.icon'></i>
+                <font-awesome-icon :icon="socialNetworkItem.icon" size="lg"/>
               </vs-button>
             </div>
 
@@ -103,7 +103,7 @@
         <v-slide-x-reverse-transition>
           <vs-button v-if="mobileDrawer" class="transitions" size="xl" color="dark" transparent
                      @click="mobileDrawer=false">
-            <i class="fas fa-arrow-right"></i>
+            <font-awesome-icon :icon="['fas', 'arrow-right']"/>
           </vs-button>
         </v-slide-x-reverse-transition>
 
@@ -125,14 +125,16 @@
                   :href="pageItem.link" shadow :disabled="pageItem.disabled"
                   :active="active === pageItem.id" @click="active=pageItem.id"
                 >
-                  <i :class="pageItem.icon + ' pr-2'"></i> {{pageItem.title}}
+                  <font-awesome-icon :icon="pageItem.icon" pull="left" class="pr-1"/>
+                  {{pageItem.title}}
                 </vs-button>
                 <vs-button
                   v-else
                   :to="pageItem.link" shadow :disabled="pageItem.disabled"
                   :active="active === pageItem.id" @click="active=pageItem.id"
                 >
-                  <i :class="pageItem.icon + ' pr-2'"></i> {{pageItem.title}}
+                  <font-awesome-icon :icon="pageItem.icon" pull="left" class="pr-1"/>
+                  {{pageItem.title}}
                 </vs-button>
               </div>
             </v-col>
@@ -150,7 +152,7 @@
               <vs-button
                 v-if="!socialNetworkItem.disabled"
                 icon :color="socialNetworkItem.color" :href="socialNetworkItem.link" blank>
-                <i :class='socialNetworkItem.icon'></i>
+                <font-awesome-icon :icon="socialNetworkItem.icon" size="lg"/>
               </vs-button>
             </v-col>
 
@@ -174,7 +176,7 @@
           {
             id: 0,
             title: 'Home',
-            icon: 'fas fa-home',
+            icon: ['fas', 'home'],
             link: '/home',
             external_link: false,
             disabled: false
@@ -182,7 +184,7 @@
           {
             id: 1,
             title: 'About',
-            icon: 'fas fa-user-circle',
+            icon: ['fas', 'user-circle'],
             link: '/about',
             external_link: false,
             disabled: false
@@ -190,7 +192,7 @@
           {
             id: 2,
             title: 'Projects',
-            icon: 'fas fa-tasks',
+            icon: ['fas', 'tasks'],
             link: '/projects',
             external_link: false,
             disabled: true
@@ -198,7 +200,7 @@
           {
             id: 3,
             title: 'Blog',
-            icon: 'fas fa-newspaper',
+            icon: ['fas', 'newspaper'],
             link: '/blog',
             external_link: false,
             disabled: false
@@ -206,7 +208,7 @@
           {
             id: 4,
             title: 'Contact',
-            icon: 'fas fa-envelope',
+            icon: ['fas', 'envelope'],
             link: 'mailto:theomeb@gmail.com',
             external_link: true,
             disabled: false,
@@ -218,7 +220,7 @@
             name: 'LinkedIn',
             color: 'linkedin',
             link: 'https://www.linkedin.com/in/theomeborck/',
-            icon: 'fab fa-linkedin',
+            icon: ['fab', 'linkedin'],
             disabled: false,
           },
           {
@@ -226,7 +228,7 @@
             name: 'Github',
             color: 'dark',
             link: 'https://github.com/theomeb',
-            icon: 'fab fa-github',
+            icon: ['fab', 'github'],
             disabled: false,
 
           },
@@ -235,7 +237,7 @@
             name: 'Medium',
             color: 'medium',
             link: 'https://medium.com/@theomeb',
-            icon: 'fab fa-medium',
+            icon: ['fab', 'medium'],
             disabled: false,
 
           },
@@ -244,7 +246,7 @@
             name: 'Facebook',
             color: 'facebook',
             link: 'https://www.facebook.com/theomeb',
-            icon: 'fab fa-facebook',
+            icon: ['fab', 'facebook-square'],
             disabled: false,
 
           },

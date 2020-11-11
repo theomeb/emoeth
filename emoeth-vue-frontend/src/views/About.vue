@@ -21,11 +21,11 @@
               target="blank"
               @click="triggerCVLoading"
             >
-              <v-icon small class="pr-2">fas fa-file-pdf</v-icon>
+              <font-awesome-icon pull="left" size="lg" :icon="['fas', 'file-pdf']"/>
               Over here to get my CV!
               <template v-slot:loader>
                 <span class="cv-download-loader">
-                  <v-icon small>mdi-cached fas fa-spin</v-icon>
+                  <font-awesome-icon size="lg" :icon="['fas', 'sync-alt']" spin class="fa-spin"/>
                 </span>
               </template>
             </v-btn>
@@ -298,4 +298,9 @@
 </script>
 
 <style scoped>
+
+  .fa-spin {
+    animation-duration: 1s;
+  }
+
 </style>

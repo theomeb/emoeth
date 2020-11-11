@@ -9,7 +9,7 @@
         v-if="!displayExperience"
         class="scroll-btn" size="small" upload flat icon color="dark"
       >
-        <i class="fas fa-arrow-down"></i>
+        <font-awesome-icon :icon="['fas', 'arrow-down']" size="lg"/>
       </vs-button>
     </v-scale-transition>
 

@@ -83,7 +83,7 @@
                   <div class="body-2 font-weight-light text-left">BLOG</div>
                 </v-list-item-content>
                 <v-list-item-avatar>
-                  <v-icon color="black">fas fa-rss-square</v-icon>
+                  <font-awesome-icon :icon="['fas', 'rss-square']" size="2x"/>
                 </v-list-item-avatar>
               </v-list-item>
 
@@ -112,7 +112,7 @@
                   <div class="body-2 font-weight-light text-left">PROJECTS</div>
                 </v-list-item-content>
                 <v-list-item-avatar>
-                  <v-icon color="black">fas fa-project-diagram</v-icon>
+                  <font-awesome-icon :icon="['fas', 'project-diagram']" size="lg"/>
                 </v-list-item-avatar>
               </v-list-item>
 
@@ -169,7 +169,7 @@
                   <div class="body-2 font-weight-light text-left">BLOG</div>
                 </v-list-item-content>
                 <v-list-item-avatar>
-                  <v-icon color="black">fas fa-rss-square</v-icon>
+                  <font-awesome-icon :icon="['fas', 'rss-square']" size="2x"/>
                 </v-list-item-avatar>
               </v-list-item>
 
@@ -197,7 +197,7 @@
                   <div class="body-2 font-weight-light text-left">PROJECTS</div>
                 </v-list-item-content>
                 <v-list-item-avatar>
-                  <v-icon color="black">fas fa-project-diagram</v-icon>
+                  <font-awesome-icon :icon="['fas', 'project-diagram']" size="lg"/>
                 </v-list-item-avatar>
               </v-list-item>
 
