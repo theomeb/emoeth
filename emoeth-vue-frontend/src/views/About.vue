@@ -111,7 +111,23 @@
       return {
         experiences: [
           {
-            display: false,
+            slug: 'parkdepot_workingstudent',
+            title: 'ParkDepot',
+            subtitle: 'ML Engineer - Working Student',
+            dates: 'Munich | June 2020 - now',
+            illustration: require('../assets/illustrations/parking.jpg'),
+            lazy_illustration: require('../assets/illustrations/low_quality/parking.jpg'),
+            alt: 'Parking picture',
+            logo: require('../assets/logos/parkdepot_logo.png'),
+            logo_alt: 'ParkDepot Logo',
+            logo_width: "140px",
+            mobile_logo_with: "100px",
+            details: [
+              '• Building a real-time Automatic License Plate Recognition pipeline, to monitor traffic in parking lots.',
+              '• Working on different deep learning problems, from vehicle detection to optical character recognition.',
+            ]
+          },
+          {
             slug: 'tum_academic',
             title: 'Technische Universität München',
             subtitle: 'MSc Mathematics in Data Science',
@@ -147,13 +163,11 @@
             logo: require('../assets/logos/hellofresh.svg'),
             logo_alt: 'HelloFresh Logo',
             logo_width: "160px",
-            mobile_logo_with: "150px",
+            mobile_logo_with: "120px",
             details: [
               '<b>part of a small tech team helping a food-delivery company</b>',
-              '• Implemented web tools to streamline and speed up Logistics and Procurement teams’ processes',
-              '• Gathered customer data to support Customer Care and Finance teams with a dedicated interface',
-              '• Created a central interface to manage future recipes and prices, HelloFresh being a food-delivery  company',
-              '• Mined historical data to improve user experience and support Quality team'
+              '• Implemented and maintained web tools to streamline and speed up processes in teams such as Logistics, Customer Care, Quality or Finance.',
+              '• Created, within a 4-people team, a central interface to manage future recipes, from price definition and recipe creation to ingredients’ ordering and packing.'
             ]
           },
           {
@@ -168,11 +182,10 @@
             logo: require('../assets/logos/theodo.png'),
             logo_alt: 'Theodo Logo',
             logo_width: "80px",
-            mobile_logo_with: "80px",
+            mobile_logo_with: "70px",
             details: [
               '<b>part of a web-development consulting company</b>',
-              '• Counseled numerous clients to help them build software solving their business problems',
-              '• Improved in a scrum-organized environment the website of <b>Tarkett</b>, a top multinational specialized in flooring (€2,836 billion revenue)',
+              '• Supported clients to help them build software solving their business problems in a scrum-organized team of 6 people.',
               '• Applied Agile & Lean methods to make continuous improvement'
             ]
           },
@@ -192,8 +205,7 @@
             details: [
               '<b>Maths</b>: Analysis, Probability, Statistics, Partial Differential Equations', ,
               '<b>Computer Science</b>: Machine Learning, Software Development, Algorithms and Programming',
-              '<b>Business</b>: Economy, Advanced, Corporate Finance, Entrepreneurship, Applications of statistical physics to socio-economical complex\n' +
-              'systems',
+              '<b>Business</b>: Economy, Advanced, Corporate Finance, Entrepreneurship, Applications of statistical physics to socio-economical complex systems',
               '<b>Physics</b>: Heat Transfer, Thermodynamics, Quantum and Statistical Physics, Life Science',
               '<b>Engineering</b>: Embedded Control Systems, Sustainable Development, Design of Mechanical Structures Laboratory, Civil Engineering',
               '<b>Innovation project</b>: Mobile application implementation for the campus community'
@@ -214,7 +226,7 @@
             mobile_logo_with: "140px",
             details: [
               '<b>Lighting and power equipment rental company (TV, Cinema, Advertisement)</b>',
-              '• Worked 4 weeks as a blue-collar worker in a team of 10 operators',
+              '• Worked 4 weeks as a technician in a team of 10 operators',
               '• Carried out repairs on mechanical and electric material, picking/packing orders',
             ]
           },
@@ -230,13 +242,13 @@
             logo: require('../assets/logos/pierre_corneille.png'),
             logo_alt: 'Lycee Pierre Corneille Logo',
             logo_width: "50px",
-            mobile_logo_with: "50px",
+            mobile_logo_with: "40px",
             details: [
               '<b>for the highly competitive entrance exams to the French Grandes Écoles</b>',
               '• Mathematics',
               '• Physics',
               '• Computer Science',
-              '• Philosophy and General Culture'
+              '• Philosophy and General Knowledge'
             ]
           },
           {
@@ -250,7 +262,7 @@
             alt: 'Normandie picture',
             logo: require('../assets/logos/education_nationale.png'),
             logo_alt: 'Education Nationale Logo',
-            logo_width: "70px",
+            logo_width: "60px",
             mobile_logo_with: "45px",
             details: [
               '<b>Scientific High School Diploma</b>',
