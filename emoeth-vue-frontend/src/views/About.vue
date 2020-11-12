@@ -205,7 +205,7 @@
               '<b>Business</b>: Economy, Advanced, Corporate Finance, Entrepreneurship, Applications of statistical physics to socio-economical complex systems',
               '<b>Physics</b>: Heat Transfer, Thermodynamics, Quantum and Statistical Physics, Life Science',
               '<b>Engineering</b>: Embedded Control Systems, Sustainable Development, Design of Mechanical Structures Laboratory, Civil Engineering',
-              '<b>Innovation project</b>: Mobile application implementation for the campus community'
+              '<b>Innovation project</b>: Mobile application implementation for the campus community. Get it here <b>resa.centralesupelec.fr/campass.html</b> !'
             ]
           },
           {
