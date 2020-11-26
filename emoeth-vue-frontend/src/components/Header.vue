@@ -8,19 +8,19 @@
     >
       <div class="d-flex align-center">
         <v-img
-          alt="Building bee logo"
-          class="shrink mr-2 mb-2 ml-lg-12"
+          alt="Code logo"
+          class="shrink mr-2 ml-lg-12"
           contain
-          src="../assets/rocket.png"
+          src="../assets/code_black.png"
           transition="scale-transition"
           width="40"
-          title="Icon made by Freepik on Flaticon"
+          title="Made by Icongeek26 - Flaticon"
         />
 
         <v-fade-transition :appear="true">
           <h2
             v-if="displayTitle"
-            class="shrink mt-1 font-weight-thin pl-1"
+            class="shrink mt-1 font-weight-light pl-2"
             min-width="100"
             width="100"
             transition="scale-transition"
