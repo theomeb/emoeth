@@ -6,7 +6,7 @@
 
     <v-scale-transition :appear="true">
       <vs-button
-        v-if="!displayExperience"
+        v-if="displayScrollButton"
         class="scroll-btn" size="small" upload flat icon color="dark"
       >
         <font-awesome-icon :icon="['fas', 'arrow-down']" size="lg"/>
@@ -118,6 +118,7 @@
       experience: Object,
       index: Number,
       displayExperience: Boolean,
+      displayScrollButton: Boolean,
       imageRightAligned: Boolean,
     }
   }

@@ -73,9 +73,10 @@
       <experience
         v-for="(experience, index) in experiences" :experience="experience"
         :display-experience="index < nbExperiencesDisplayed"
+        :display-scroll-button="index == nbExperiencesDisplayed"
         v-intersect="{
           handler: onIntersect,
-          options: {threshold: [closeIntersectionThreshold,  intersectionThreshold]
+          options: {threshold: [intersectionThreshold]
           }}"
         :key="'experience-' + index" :id="index"
         :image-right-aligned="index % 2 === 1"
@@ -265,7 +266,6 @@
         ],
         nbExperiencesDisplayed: 1,
         intersectionThreshold: 0.8,
-        closeIntersectionThreshold: 0.3,
         showExperiences: false,
         avatarLink: require('../assets/pp.jpg'),
         CVLoading: false,
@@ -277,11 +277,7 @@
         let id = parseInt(entries[0].target.id);
 
         if ((id + 1) > this.nbExperiencesDisplayed && intersection >= this.intersectionThreshold) {
-          if (intersection >= this.intersectionThreshold) {
-            this.nbExperiencesDisplayed += 1;
-          }
-        } else if ((id + 1) === this.nbExperiencesDisplayed && intersection <= this.closeIntersectionThreshold) {
-          this.nbExperiencesDisplayed -= 1;
+          this.nbExperiencesDisplayed = (id+1)
         }
       },
       triggerCVLoading() {
