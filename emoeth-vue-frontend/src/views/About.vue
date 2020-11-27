@@ -123,7 +123,7 @@
             logo_width: "140px",
             mobile_logo_with: "100px",
             details: [
-              '• Building a real-time Automatic License Plate Recognition pipeline, to monitor traffic in parking lots.',
+              '• Building a real-time automatic license plate recognition pipeline, to monitor traffic in parking lots.',
               '• Working on different deep learning problems, from vehicle detection to optical character recognition.',
             ]
           },
@@ -140,14 +140,12 @@
             logo_width: "70px",
             mobile_logo_with: "60px",
             details: [
-              '• Foundations in <b>data engineering</b> and <b>data analysis</b>',
               '<b>Applied mathematics</b>',
-              '• Applied regression',
-              '• Probabilistic techniques and algorithms in data analysis',
-              '<b>ML & Computer vision</b>',
-              '• Machine learning, ML for graphs and sequential data',
-              '• Deep learning',
-              '• Computer vision - detection, segmentation and tracking',
+              'Foundations in data analysis, Applied regression, Probabilistic techniques and algorithms in data analysis',
+              '<b>Data Engineering & Analytics</b>',
+              'Foundations in data engineering, Data mining and knowledge discovery, Machine learning, Machine learning for graphs and sequential data, Business Analytics',
+              '<b>Computer vision & Natural Language Processing</b>',
+              'Deep learning, Computer vision (detection, segmentation and tracking), NLP',
               '<b>TUM Data Innovation Lab</b>: Deep learning for genetic risk prediction'
             ]
           },
@@ -266,8 +264,8 @@
           }
         ],
         nbExperiencesDisplayed: 1,
-        intersectionThreshold: 0.7,
-        closeIntersectionThreshold: 0.5,
+        intersectionThreshold: 0.8,
+        closeIntersectionThreshold: 0.3,
         showExperiences: false,
         avatarLink: require('../assets/pp.jpg'),
         CVLoading: false,
@@ -283,9 +281,7 @@
             this.nbExperiencesDisplayed += 1;
           }
         } else if ((id + 1) === this.nbExperiencesDisplayed && intersection <= this.closeIntersectionThreshold) {
-          if (intersection < this.intersectionThreshold) {
-            this.nbExperiencesDisplayed -= 1;
-          }
+          this.nbExperiencesDisplayed -= 1;
         }
       },
       triggerCVLoading() {
