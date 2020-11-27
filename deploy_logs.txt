@@ -48,3 +48,4 @@
 [2020-11-11 18:07:20] Front build v1.8.1 deployed on AWS S3.
 [2020-11-26 17:11:27] Front build v1.8.2 deployed on AWS S3.
 [2020-11-26 17:21:44] Front build v1.8.3 deployed on AWS S3.
+[2020-11-27 09:56:21] Front build v1.8.4 deployed on AWS S3.
