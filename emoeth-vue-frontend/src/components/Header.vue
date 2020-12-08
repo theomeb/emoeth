@@ -192,21 +192,13 @@
           {
             id: 2,
             title: 'Projects',
-            icon: ['fas', 'tasks'],
-            link: '/projects',
-            external_link: false,
-            disabled: true
-          },
-          {
-            id: 3,
-            title: 'Blog',
-            icon: ['fas', 'newspaper'],
+            icon: ['fas', 'stream'],
             link: '/blog',
             external_link: false,
             disabled: false
           },
           {
-            id: 4,
+            id: 3,
             title: 'Contact',
             icon: ['fas', 'envelope'],
             link: 'mailto:theomeb@gmail.com',
