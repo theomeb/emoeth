@@ -21,7 +21,7 @@
               target="blank"
               @click="triggerCVLoading"
             >
-              <font-awesome-icon pull="left" size="lg" :icon="['fas', 'file-pdf']"/>
+              <font-awesome-icon pull="left" size="lg" class="pr-1" :icon="['fas', 'file-pdf']"/>
               Over here to get my CV!
               <template v-slot:loader>
                 <span class="cv-download-loader">
