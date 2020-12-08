@@ -1,23 +1,31 @@
 <p align="center">
-  <p align="center">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png" height="60">
-    <img src="https://static.thenounproject.com/png/2663763-200.png" height="60">
-    <img src="https://seeklogo.com/images/V/vuetify-logo-3BCF73C928-seeklogo.com.png" height="60" padding-left="10">
-    <img src="https://static.thenounproject.com/png/2663763-200.png" height="60">
-    <img src="https://vuesax.com/logos/logo-vuesax-svg-7.svg" height="60" padding-left="10">
-  </div>
-  
-  <h3 align="center">Vue + Vuetify (and Vuesax)</h3>
+   <img src="emoeth-vue-frontend/src/assets/code_colored.png" height="50">  
   <p align="center">Front-end site for my personal portfolio/showcase + back API to support it.<p>
 </p>
 
-## Structure
-- Static front-end `emoeth-vue-frontend`
-- API `api-emoeth`: back deployed on an AWS Lambda
+## Structure & Stack
+- Static frontend `emoeth-vue-frontend`: **Vue + Vuetify (and Vuesax)**
+      <p align="left">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/1024px-Vue.js_Logo_2.svg.png" height="20">
+        <img src="https://static.thenounproject.com/png/2663763-200.png" height="20">
+        <img src="https://seeklogo.com/images/V/vuetify-logo-3BCF73C928-seeklogo.com.png" height="20" padding-left="10">
+        <img src="https://static.thenounproject.com/png/2663763-200.png" height="20">
+        <img src="https://vuesax.com/logos/logo-vuesax-svg-7.svg" height="20" padding-left="10">
+      </p>
+
+- API `api-emoeth`: **Flask** app deployed on an **AWS Lambda** with **Serverless framework**
+      <p align="left">
+        <img src="https://blog.wescale.fr/content/images/2018/02/Logo-Lambda-AWS.png" height="20">
+        <img src="https://static.thenounproject.com/png/2663763-200.png" height="20">
+        <img src="https://miro.medium.com/max/438/1*0G5zu7CnXdMT9pGbYUTQLQ.png" height="20" padding-left="10">
+        <img src="https://static.thenounproject.com/png/2663763-200.png" height="20">
+        <img src="https://miro.medium.com/max/5274/1*CuALG7dV2rLky1sapJbnUQ.png" height="20" padding-left="10">
+      </p>
+
 
 ## Development
 
-- Front-end
+- Frontend
 
 ```bash
 
