@@ -13,8 +13,8 @@ import {
   faFilePdf,
   faHome,
   faNewspaper,
-  faProjectDiagram,
-  faRssSquare,
+  faSearch,
+  faStream,
   faSyncAlt,
   faTasks,
   faUserCircle,
@@ -26,8 +26,8 @@ import {faFacebookSquare, faGithub, faLinkedin, faMedium} from '@fortawesome/fre
 import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
 library.add(faBars, faFilePdf, faSyncAlt, faHome, faUserCircle, faTasks, faArrowRight,
-  faNewspaper, faEnvelope, faLinkedin, faGithub, faMedium, faFacebookSquare, faRssSquare,
-  faProjectDiagram, faTimes, faCircleNotch, faArrowDown)
+  faNewspaper, faEnvelope, faLinkedin, faGithub, faMedium, faFacebookSquare, faStream,
+  faSearch, faTimes, faCircleNotch, faArrowDown)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

@@ -45,13 +45,13 @@
           >
             <v-card
               :elevation="!hover ? 2 : 10"
-              max-width="250"
+              max-width="260"
               :color="theme.light.primary"
               to="about"
             >
               <v-list-item>
                 <v-list-item-content>
-                  <div class="body-2 font-weight-light text-left white--text">THÉOMÉ BORCK</div>
+                  <div class="body-2 font-weight-light text-left white--text">BACKGROUND</div>
                 </v-list-item-content>
                 <v-list-item-avatar>
                   <v-img :src="avatarLink"></v-img>
@@ -59,8 +59,8 @@
               </v-list-item>
 
               <v-card-actions>
-                <div class="subtitle-1 font-weight-regular pl-2 white--text">Check out my
-                  experiences
+                <div class="subtitle-1 font-weight-regular pl-2 white--text">
+                  Academic & work experience
                 </div>
               </v-card-actions>
             </v-card>
@@ -74,7 +74,7 @@
           >
             <v-card
               :elevation="!hover ? 2 : 10"
-              max-width="250"
+              max-width="260"
               :color="theme.light.secondary"
               to="blog"
             >
@@ -83,12 +83,12 @@
                   <div class="body-2 font-weight-light text-left">BLOG</div>
                 </v-list-item-content>
                 <v-list-item-avatar>
-                  <font-awesome-icon :icon="['fas', 'rss-square']" size="2x"/>
+                  <font-awesome-icon :icon="['fas', 'stream']" size="lg"/>
                 </v-list-item-avatar>
               </v-list-item>
 
               <v-card-actions>
-                <div class="subtitle-1 font-weight-regular pl-2">Go to my previous posts</div>
+                <div class="subtitle-1 font-weight-regular pl-2">Projects & initiatives</div>
               </v-card-actions>
             </v-card>
           </v-hover>
@@ -100,26 +100,33 @@
             open-delay="0"
             v-if="showOptions"
           >
-            <v-card
-              :elevation="!hover ? 2 : 10"
-              max-width="250"
-              :color="theme.light.accent"
-              to="projects"
-              disabled
-            >
-              <v-list-item>
-                <v-list-item-content>
-                  <div class="body-2 font-weight-light text-left">PROJECTS</div>
-                </v-list-item-content>
-                <v-list-item-avatar>
-                  <font-awesome-icon :icon="['fas', 'project-diagram']" size="lg"/>
-                </v-list-item-avatar>
-              </v-list-item>
+            <div style="max-width:260px;">
+              <v-card
+                max-width="260"
+                :color="theme.light.accent"
+                to="projects"
+                disabled
+              >
+                <v-list-item>
+                  <v-list-item-content>
+                    <div class="body-2 font-weight-light text-left">CATEGORIES</div>
+                  </v-list-item-content>
+                  <v-list-item-avatar>
+                    <font-awesome-icon :icon="['fas', 'search']" size="lg"/>
+                  </v-list-item-avatar>
+                </v-list-item>
 
-              <v-card-actions>
-                <div class="subtitle-1 font-weight-regular pl-2">Click to see my projects</div>
-              </v-card-actions>
-            </v-card>
+                <v-card-actions>
+                  <div class="subtitle-1 font-weight-regular pl-2">Search by topic</div>
+                </v-card-actions>
+              </v-card>
+              <v-slide-x-transition>
+                <p v-if="hover" class="caption font-weight-light pt-1 pr-1"
+                   style="text-align: right;">
+                  ... incoming !
+                </p>
+              </v-slide-x-transition>
+            </div>
           </v-hover>
         </v-col>
 
@@ -131,13 +138,13 @@
           >
             <v-card
               :elevation="!hover ? 2 : 10"
-              max-width="250"
+              max-width="260"
               :color="theme.light.primary"
               to="about"
             >
               <v-list-item>
                 <v-list-item-content>
-                  <div class="body-2 font-weight-light text-left white--text">THÉOMÉ BORCK</div>
+                  <div class="body-2 font-weight-light text-left white--text">BACKGROUND</div>
                 </v-list-item-content>
                 <v-list-item-avatar>
                   <v-img :src="avatarLink"></v-img>
@@ -145,8 +152,8 @@
               </v-list-item>
 
               <v-card-actions>
-                <div class="subtitle-1 font-weight-regular pl-2 white--text">Check out my
-                  experiences
+                <div class="subtitle-1 font-weight-regular pl-2 white--text">
+                  Academic & work experience
                 </div>
               </v-card-actions>
             </v-card>
@@ -160,7 +167,7 @@
           >
             <v-card
               :elevation="!hover ? 2 : 10"
-              max-width="250"
+              max-width="260"
               :color="theme.light.secondary"
               to="blog"
             >
@@ -169,12 +176,12 @@
                   <div class="body-2 font-weight-light text-left">BLOG</div>
                 </v-list-item-content>
                 <v-list-item-avatar>
-                  <font-awesome-icon :icon="['fas', 'rss-square']" size="2x"/>
+                  <font-awesome-icon :icon="['fas', 'stream']"/>
                 </v-list-item-avatar>
               </v-list-item>
 
               <v-card-actions>
-                <div class="subtitle-1 font-weight-regular pl-2">Go to my previous posts</div>
+                <div class="subtitle-1 font-weight-regular pl-2">Projects & Initiatives</div>
               </v-card-actions>
             </v-card>
           </v-hover>
@@ -185,26 +192,32 @@
             open-delay="0"
             v-if="showOptions"
           >
-            <v-card
-              :elevation="!hover ? 2 : 10"
-              max-width="250"
-              :color="theme.light.accent"
-              to="projects"
-              disabled
-            >
-              <v-list-item>
-                <v-list-item-content>
-                  <div class="body-2 font-weight-light text-left">PROJECTS</div>
-                </v-list-item-content>
-                <v-list-item-avatar>
-                  <font-awesome-icon :icon="['fas', 'project-diagram']" size="lg"/>
-                </v-list-item-avatar>
-              </v-list-item>
+            <div style="max-width:260px;">
+              <v-card
+                :color="theme.light.accent"
+                to="projects"
+                disabled
+              >
+                <v-list-item>
+                  <v-list-item-content>
+                    <div class="body-2 font-weight-light text-left">CATEGORIES</div>
+                  </v-list-item-content>
+                  <v-list-item-avatar>
+                    <font-awesome-icon :icon="['fas', 'search']"/>
+                  </v-list-item-avatar>
+                </v-list-item>
 
-              <v-card-actions>
-                <div class="subtitle-1 font-weight-regular pl-2">Click to see my projects</div>
-              </v-card-actions>
-            </v-card>
+                <v-card-actions>
+                  <div class="subtitle-1 font-weight-regular pl-2">Search by topic</div>
+                </v-card-actions>
+              </v-card>
+              <v-slide-x-transition>
+                <p v-if="hover" class="caption font-weight-light pt-1 pr-1"
+                   style="text-align: right;">
+                  ... incoming !
+                </p>
+              </v-slide-x-transition>
+            </div>
           </v-hover>
         </v-col>
       </v-row>
