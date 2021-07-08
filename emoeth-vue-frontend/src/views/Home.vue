@@ -11,17 +11,17 @@
         <v-slide-y-transition :appear="true">
           <div class="headline font-weight-thin d-sm-flex justify-center">
             <div class="subtitle">
-              {{displayedSubTitle.substring(0,22) + '&nbsp'}}
+              {{displayedSubTitle.substring(0,21) + '&nbsp'}}
               <div
                 class="cursor"
-                v-if="indexTyping >= title.length && indexTyping < (title.length + 22)"
+                v-if="indexTyping >= title.length && indexTyping < (title.length + 21)"
               ></div>
             </div>
             <div class="subtitle">
-              {{displayedSubTitle.substring(23, displayedSubTitle.length)}}
+              {{displayedSubTitle.substring(22, displayedSubTitle.length)}}
               <div
                 class="cursor"
-                v-if="indexTyping >= title.length + 24 && indexTyping < (title.length + subTitle.length)"
+                v-if="indexTyping >= title.length + 23 && indexTyping < (title.length + subTitle.length)"
               ></div>
             </div>
           </div>
@@ -244,7 +244,7 @@
         displayedTitle: '',
         title: 'Hey\nthere,',
         displayedSubTitle: '',
-        subTitle: 'you safely reached out my personal website',
+        subTitle: 'you safely reached my personal website',
         showOptions: false,
         theme: theme
       }
